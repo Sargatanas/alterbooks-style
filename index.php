@@ -162,6 +162,5 @@
     </div>
 </main>
 
-<script src="js/style/ripple.js"></script>
 </body>
 </html>
