@@ -12,9 +12,9 @@
     background: white;
 
     border: 1px solid @grey;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1) inset;
     outline: 0;
-
-    box-shadow: 3px 3px 0 0 rgba(128, 128, 128, 0.2);
 
     font-family: "Verdana", "Geneva CY", "DejaVu Sans", sans-serif;
     font-size: 18px;
@@ -22,52 +22,12 @@
     text-transform: uppercase;
 
     cursor: pointer;
-    transition-duration: 0.2s;
 
     &:hover {
-        transition-duration: 0.2s;
+        background: rgb(249, 249, 249);
     }
-
-    &:before,
-    &:after {
-        content: '';
-        position: absolute;
-
-        width: 0;
-        height: 0;
-
-        border: 2px solid transparent;
-
-        opacity: 0;
-    }
-    &:before {
-        bottom: 10%;
-        left: 5px;
-    }
-    &:after {
-        top: 10%;
-        right: 5px;
-    }
-
-    &:hover:before,
-    &:hover:after {
-        height: ~'calc(80% - 4px)';
-        width: 20px;
-        opacity: 1;
-        transition: height 0.2s 0s, width 0.1s 0.2s;
-    }
-    &:hover:before {
-        border-top-color: @grey;
-        border-left-color: @grey;
-    }
-    &:hover:after {
-        border-bottom-color: @grey;
-        border-right-color: @grey;
-    }
-
-    &:active:before,
-    &:active:after {
-        width: ~"calc(100% - 14px)";
+    &:active {
+        background: rgb(244, 244, 244);
     }
 
 
@@ -76,13 +36,11 @@
         border: none;
         color: white;
 
-        &:hover:before {
-            border-top-color: white;
-            border-left-color: white;
+        &:hover {
+            background: @lightgreen;
         }
-        &:hover:after {
-            border-bottom-color: white;
-            border-right-color: white;
+        &:active {
+            background: @darkgreen;
         }
     }
 

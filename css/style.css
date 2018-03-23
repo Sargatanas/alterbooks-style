@@ -20,66 +20,31 @@
   min-height: 45px;
   background: white;
   border: 1px solid #c9c8c8;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1) inset;
   outline: 0;
-  box-shadow: 3px 3px 0 0 rgba(128, 128, 128, 0.2);
   font-family: "Verdana", "Geneva CY", "DejaVu Sans", sans-serif;
   font-size: 18px;
   color: black;
   text-transform: uppercase;
   cursor: pointer;
-  transition-duration: 0.2s;
 }
 .button:hover {
-  transition-duration: 0.2s;
+  background: #f9f9f9;
 }
-.button:before,
-.button:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 2px solid transparent;
-  opacity: 0;
-}
-.button:before {
-  bottom: 10%;
-  left: 5px;
-}
-.button:after {
-  top: 10%;
-  right: 5px;
-}
-.button:hover:before,
-.button:hover:after {
-  height: calc(80% - 4px);
-  width: 20px;
-  opacity: 1;
-  transition: height 0.2s 0s, width 0.1s 0.2s;
-}
-.button:hover:before {
-  border-top-color: #c9c8c8;
-  border-left-color: #c9c8c8;
-}
-.button:hover:after {
-  border-bottom-color: #c9c8c8;
-  border-right-color: #c9c8c8;
-}
-.button:active:before,
-.button:active:after {
-  width: calc(100% - 14px);
+.button:active {
+  background: #f4f4f4;
 }
 .button_green {
   background: #00aa38;
   border: none;
   color: white;
 }
-.button_green:hover:before {
-  border-top-color: white;
-  border-left-color: white;
+.button_green:hover {
+  background: #6bbf58;
 }
-.button_green:hover:after {
-  border-bottom-color: white;
-  border-right-color: white;
+.button_green:active {
+  background: #009b31;
 }
 .button_default {
   color: #c9c8c8;
