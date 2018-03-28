@@ -71,9 +71,9 @@
                         <div class="book__title col-12 col-clear col-md-center">
                             Пиши, сокращай
                         </div>
-                        <div class="book__author col-12 col-clear col-md-center">
+                        <a class="book__author col-12 col-clear col-md-center" href="">
                             Максим Ильяхов
-                        </div>
+                        </a>
                         <div class="book__cover col-0 col-clear col-md-12"></div>
                         <div class="book-info col-12 col-clear col-md-11 col-md-center col-sm-12">
                             <div class="book-info-element">

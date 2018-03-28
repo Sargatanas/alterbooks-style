@@ -314,41 +314,9 @@
   margin: 0;
 }
 .book-genres-content__element:hover {
+  border-color: #00aa38;
   color: black;
   cursor: pointer;
-}
-.book-genres-content__element:before,
-.book-genres-content__element:after {
-  content: '';
-  position: absolute;
-  box-sizing: inherit;
-  border: 2px solid transparent;
-  border-radius: 3px;
-  width: 0;
-  height: 0;
-}
-.book-genres-content__element:before {
-  top: -2px;
-  left: -2px;
-}
-.book-genres-content__element::after {
-  bottom: -2px;
-  right: -2px;
-}
-.book-genres-content__element:hover:before,
-.book-genres-content__element:hover:after {
-  width: 100%;
-  height: 100%;
-}
-.book-genres-content__element:hover:before {
-  border-top-color: #00aa38;
-  border-right-color: #00aa38;
-  transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
-}
-.book-genres-content__element:hover:after {
-  border-bottom-color: #00aa38;
-  border-left-color: #00aa38;
-  transition: border-color 0s ease-out, width 0.15s ease-out, height 0.15s ease-out 0.15s;
 }
 @media screen and (max-width: 479px) {
   .book-genres-content__element {
