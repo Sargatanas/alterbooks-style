@@ -1,0 +1,61 @@
+.user-book {
+    display: flex;
+    margin-bottom: 15px;
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__cover {
+        width: 115px;
+        max-width: 115px;
+        height: 170px;
+
+        margin-right: 15px;
+
+        background-color: lightgrey;
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: 5px 0 15px;
+        font-size: 16px;
+    }
+
+    &-content {
+        &__element {
+            margin-bottom: 10px;
+        }
+
+        &__title, &__info {
+            min-width: 0;
+            font-size: 13px;
+            color: @darkergrey;
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        margin-top: 15px
+    ;
+    }
+
+    &__button {
+        flex-grow: 1;
+        min-height: 40px;
+
+        margin-bottom: 10px;
+        margin-right: 10px;
+
+        font-size: 14px;
+    }
+}

@@ -1,6 +1,4 @@
 .button {
-    overflow: hidden;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,10 +14,9 @@
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1) inset;
     outline: 0;
 
-    font-family: "Verdana", "Geneva CY", "DejaVu Sans", sans-serif;
-    font-size: 18px;
     color: black;
     text-transform: uppercase;
+    text-decoration: none;
 
     cursor: pointer;
 
@@ -30,6 +27,8 @@
         background: rgb(244, 244, 244);
     }
 
+
+    // Цветовые модификации
 
     &_green {
         background: @green;
@@ -43,6 +42,48 @@
             background: @darkgreen;
         }
     }
+
+    &_red {
+        background: @red;
+        border: none;
+        color: white;
+
+        &:hover {
+            background: @lightred;
+        }
+        &:active {
+            background: @darkred;
+        }
+    }
+
+    &_second {
+        display: flex;
+        width: 100%;
+
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        padding: 8px 10px;
+
+        border: 2px solid @grey;
+        border-radius: 3px;
+        background: transparent;
+        box-shadow: none;
+
+        color: @darkgrey;
+        text-transform: none;
+
+        transition-property: border-color, color;
+        transition-duration: 0.3s, 0.3s;
+
+        &:hover {
+            border-color: @green;
+            color: black;
+            cursor: pointer;
+        }
+    }
+
+    // Дефолтные значения
 
     &_default {
         color: @grey;

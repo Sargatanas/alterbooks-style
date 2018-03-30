@@ -1,0 +1,64 @@
+.block-content {
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+
+        &__title {
+            margin-left: 10px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        &__hr {
+            width: 100%;
+            border: none;
+            border-top: 2px solid @grey;
+        }
+
+        // Модификации
+
+        &_center {
+            flex-direction: row;
+            margin-bottom: 20px;
+
+            & > .block-content-header__title {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &-main {
+        display: flex;
+        flex-direction: column;
+
+        &__element {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+        }
+
+        &__title, &__info {
+            display: flex;
+            min-width: 150px;
+            font-size: 15px;
+        }
+
+        &__title {
+            justify-content: flex-end;
+            margin-right: 10px;
+
+            &:after {
+                content: ":";
+            }
+        }
+
+        &__info {
+            color: @darkergrey;
+        }
+    }
+}
