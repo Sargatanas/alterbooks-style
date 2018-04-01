@@ -252,7 +252,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12">
+                                        <div class="col-12 col-clear col-md-12">
                                             <div class="row row-end">
                                                 <button class="user-book__button button button_second col-4 col-md-12">
                                                     <span>и еще 9 книг</span>

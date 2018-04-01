@@ -520,3 +520,6 @@
   margin-right: 10px;
   font-size: 14px;
 }
+.user-book__button:last-child {
+  margin-right: 0;
+}
