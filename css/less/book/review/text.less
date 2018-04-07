@@ -1,0 +1,48 @@
+.review-text {
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+    line-height: 1.5;
+
+    @media screen and (max-width: @md) {
+        margin-left: 0;
+    }
+
+    // обрезка текста под cut
+    overflow-y: hidden;
+    position: relative;
+    width: 200px;
+    max-height: 16.5em;
+
+    &__block {
+        position: absolute;
+        left: 20px;
+        top: ~"calc(15em - 4px)";
+
+        display: flex;
+        align-items: center;
+        z-index: 10;
+
+        width: ~"calc(100% - 20px)";
+        height: 1.5em;
+
+        background: linear-gradient(to right, transparent 0%, @transparent 40%, @transparent 100%);
+    }
+
+    &__more {
+        position: absolute;
+        top: ~"calc(15em - 4px)";
+        right: 0;
+        z-index: 20;
+
+        height: 1.5em;
+
+        outline: none;
+        border: none;
+        background: transparent;
+
+        text-decoration: underline;
+
+        cursor: pointer;
+    }
+}

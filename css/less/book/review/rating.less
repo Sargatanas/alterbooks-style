@@ -1,0 +1,203 @@
+.review-rating {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    flex-basis: 100%;
+    max-width: 100%;
+
+    margin-bottom: 10px;
+
+    &:after {
+        content: "";
+
+        position: absolute;
+        bottom: -2px;
+
+        width: 100%;
+        height: 2px;
+
+        background: @grey;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 85px;
+        height: 35px;
+
+        margin-left: 15px;
+
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        background: @grey;
+
+        color: white;
+
+        @media screen and (max-width: @sm) {
+            margin-left: 0;
+        }
+    }
+
+    &-stars{
+        display: flex;
+        margin-left: 15px;
+
+        @media screen and (max-width: @sm) {
+            display: none;
+        }
+    }
+
+    &__star {
+        width: 22px;
+        height: 22px;
+        fill: @grey;
+    }
+
+
+    &[data-rating="10"] {
+        @color: @green;
+        &:after {
+            background: @color;
+        }
+        & .review-rating__header {
+            background: @color;
+        }
+        & .review-rating__star {
+            &_active {
+                fill: @color;
+            }
+        }
+    }
+    &[data-rating="9"] {
+        @color: #7cad1e;
+        &:after {
+            background: @color;
+        }
+        & .review-rating__header {
+            background: @color;
+        }
+        & .review-rating__star {
+            &_active {
+                fill: @color;
+            }
+        }
+    }
+    &[data-rating="8"] {
+        @color: #a1af1c;
+        &:after {
+            background: @color;
+        }
+        & .review-rating__header {
+            background: @color;
+        }
+        & .review-rating__star {
+            &_active {
+                fill: @color;
+            }
+        }
+    }
+    &[data-rating="7"] {
+        @color: #bfb82b;
+        &:after {
+            background: @color;
+        }
+        & .review-rating__header {
+            background: @color;
+        }
+        & .review-rating__star {
+            &_active {
+                fill: @color;
+            }
+        }
+    }
+    &[data-rating="6"] {
+        @color: #d3b740;
+        &:after {
+            background: @color;
+        }
+        & .review-rating__header {
+            background: @color;
+        }
+        & .review-rating__star {
+            &_active {
+                fill: @color;
+            }
+        }
+    }
+    &[data-rating="5"] {
+        @color: #ddac33;
+        &:after {
+            background: @color;
+        }
+        & .review-rating__header {
+            background: @color;
+        }
+        & .review-rating__star {
+            &_active {
+                fill: @color;
+            }
+        }
+    }
+    &[data-rating="4"] {
+        @color: #db8f35;
+        &:after {
+            background: @color;
+        }
+        & .review-rating__header {
+            background: @color;
+        }
+        & .review-rating__star {
+            &_active {
+                fill: @color;
+            }
+        }
+    }
+    &[data-rating="3"] {
+        @color: #d67b29;
+        &:after {
+            background: @color;
+        }
+        & .review-rating__header {
+            background: @color;
+        }
+        & .review-rating__star {
+            &_active {
+                fill: @color;
+            }
+        }
+    }
+    &[data-rating="2"] {
+        @color: #dd582f;
+        &:after {
+            background: @color;
+        }
+        & .review-rating__header {
+            background: @color;
+        }
+        & .review-rating__star {
+            &_active {
+                fill: @color;
+            }
+        }
+    }
+    &[data-rating="1"] {
+        @color: #d24a43;
+        &:after {
+            background: @color;
+        }
+        & .review-rating__header {
+            background: @color;
+        }
+        & .review-rating__star {
+            &_active {
+                fill: @color;
+            }
+        }
+    }
+}

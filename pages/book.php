@@ -159,10 +159,334 @@
                         </div>
                     </div>
                 </div>
+                <div class="review block-content col-12">
+                    <div class="block-content-header">
+                        <div class="block-content-header__title block-content-header__title_center">
+                            Рецензии
+                        </div>
+                        <hr class="block-content-header__hr">
+                    </div>
+                    <div class="block-content-main">
+                        <div class="review__element">
+                            <div class="review-rating" data-rating = "7">
+                                <div class="review-rating__header">
+                                    7.0
+                                </div>
+                                <div class="review-rating-stars">
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="row row-center">
+                                <div class="review__aside col-2 col-lg-0">
+                                    <div class="review__avatar"
+                                         style="background-image: url('/css/img/avatar.png')"></div>
+                                </div>
+                                <div class="review__main col-10 col-lg-12">
+                                    <div class="row">
+                                        <div class="review__avatar-box col-0 col-lg-2 col-sm-0">
+                                            <div class="review__avatar"
+                                                 style="background-image: url('/css/img/avatar.png')"></div>
+                                        </div>
+                                        <div class="review__info-box col-12 col-clear col-lg-10 col-sm-12 col-sm-clear">
+                                            <div class="row">
+                                                <a class="review__user-name col-12 col-clear" href="">
+                                                    Пермякова Ксения Александровна
+                                                </a>
+                                                <div class="review__date col-12 col-clear">
+                                                    Дата публикации: 04.04.2018
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="review__title col-12 col-clear">
+                                            Книга не совсем о жизни
+                                        </div>
+                                        <div class="review-text col-12 col-clear" data-status="close">
+                                            Всем людям приходится писать: рабочая переписка, посты в соц сетях,
+                                            объявления на Аvito, резюме, коммерческие предложения. В карьерном плане
+                                            можно хорошо преуспеть, если научиться грамотно и интересно писать.
+                                            <br>
+                                            Контент-маркетинг перспективное направление в рекламном мире.
+                                            Оно предполагает создание уникального и полезного материала.
+                                            Поэтому ведение корпоративного блога или аккаунта в Instagram для
+                                            многих компаний уже привычное дело. Созданием контента занимаются
+                                            и SMM-менеджеры, и контент-маркетологи, и копирайтеры. Все хотят знать,
+                                            как писать, чтобы их читали?!
+                                            <br>
+                                            Контент-маркетинг перспективное направление в рекламном мире.
+                                            Оно предполагает создание уникального и полезного материала.
+                                            Поэтому ведение корпоративного блога или аккаунта в Instagram для
+                                            многих компаний уже привычное дело. Созданием контента занимаются
+                                            и SMM-менеджеры, и контент-маркетологи, и копирайтеры. Все хотят знать,
+                                            как писать, чтобы их читали?!
+
+                                            <div class="review-text__block">...</div>
+                                            <button class="review-text__more">читать далее</button>
+                                        </div>
+                                        <div class="review-grade col-12 col-clear">
+                                            <button class="review-grade__button" disabled>
+                                                &minus;
+                                            </button>
+                                            <div class="review-grade__value">
+                                                25
+                                            </div>
+                                            <button class="review-grade__button">
+                                                &plus;
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__element">
+                            <div class="review-rating" data-rating = "10">
+                                <div class="review-rating__header">
+                                    10.0
+                                </div>
+                                <div class="review-rating-stars">
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="row row-center">
+                                <div class="review__aside col-2 col-lg-0">
+                                    <div class="review__avatar"
+                                         style="background-image: url('/css/img/avatar.png')"></div>
+                                </div>
+                                <div class="review__main col-10 col-lg-12">
+                                    <div class="row">
+                                        <div class="review__avatar-box col-0 col-lg-2 col-sm-0">
+                                            <div class="review__avatar"
+                                                 style="background-image: url('/css/img/avatar.png')"></div>
+                                        </div>
+                                        <div class="review__info-box col-12 col-clear col-lg-10 col-sm-12 col-sm-clear">
+                                            <div class="row">
+                                                <a class="review__user-name col-12 col-clear" href="">
+                                                    Пермякова Ксения Александровна
+                                                </a>
+                                                <div class="review__date col-12 col-clear">
+                                                    Дата публикации: 04.04.2018
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="review__title col-12 col-clear">
+                                            Книга о жизни
+                                        </div>
+                                        <div class="review-text col-12 col-clear" data-status="close">
+                                            Всем людям приходится писать: рабочая переписка, посты в соц сетях,
+                                            объявления на Аvito, резюме, коммерческие предложения. В карьерном плане
+                                            можно хорошо преуспеть, если научиться грамотно и интересно писать.
+                                            <br>
+                                            Контент-маркетинг перспективное направление в рекламном мире.
+                                            Оно предполагает создание уникального и полезного материала.
+                                            Поэтому ведение корпоративного блога или аккаунта в Instagram для
+                                            многих компаний уже привычное дело. Созданием контента занимаются
+                                            и SMM-менеджеры, и контент-маркетологи, и копирайтеры. Все хотят знать,
+                                            как писать, чтобы их читали?!
+
+                                            <div class="review-text__block">...</div>
+                                            <button class="review-text__more">читать далее</button>
+                                        </div>
+                                        <div class="review-grade col-12 col-clear">
+                                            <button class="review-grade__button">
+                                                &minus;
+                                            </button>
+                                            <div class="review-grade__value">
+                                                44
+                                            </div>
+                                            <button class="review-grade__button">
+                                                &plus;
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__element">
+                            <div class="review-rating" data-rating = "1">
+                                <div class="review-rating__header">
+                                    1.0
+                                </div>
+                                <div class="review-rating-stars">
+                                    <svg class="review-rating__star review-rating__star_active">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                    <svg class="review-rating__star">
+                                        <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="row row-center">
+                                <div class="review__aside col-2 col-lg-0">
+                                    <div class="review__avatar"
+                                         style="background-image: url('/css/img/avatar.png')"></div>
+                                </div>
+                                <div class="review__main col-10 col-lg-12">
+                                    <div class="row">
+                                        <div class="review__avatar-box col-0 col-lg-2 col-sm-0">
+                                            <div class="review__avatar"
+                                                 style="background-image: url('/css/img/avatar.png')"></div>
+                                        </div>
+                                        <div class="review__info-box col-12 col-clear col-lg-10 col-sm-12 col-sm-clear">
+                                            <div class="row">
+                                                <a class="review__user-name col-12 col-clear" href="">
+                                                    Пермякова Ксения Александровна
+                                                </a>
+                                                <div class="review__date col-12 col-clear">
+                                                    Дата публикации: 04.04.2018
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="review__title col-12 col-clear">
+                                            Книга не о жизни
+                                        </div>
+                                        <div class="review-text col-12 col-clear" data-status="close">
+                                            Всем людям приходится писать: рабочая переписка, посты в соц сетях,
+                                            объявления на Аvito, резюме, коммерческие предложения. В карьерном плане
+                                            можно хорошо преуспеть, если научиться грамотно и интересно писать.
+
+                                            <div class="review-text__block">...</div>
+                                            <button class="review-text__more">читать далее</button>
+                                        </div>
+                                        <div class="review-grade col-12 col-clear">
+                                            <button class="review-grade__button">
+                                                &minus;
+                                            </button>
+                                            <div class="review-grade__value">
+                                                -2
+                                            </div>
+                                            <button class="review-grade__button disabled">
+                                                &plus;
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </main>
 
+<script>
+    let read_more = document.getElementsByClassName('review-text__more');
+
+    Array.prototype.forEach.call(read_more, function(more){
+        more.addEventListener('click', function (m) {
+            let text = more.parentNode;
+            let block = more.previousElementSibling;
+
+            if (text.getAttribute('data-status') === 'close') {
+                text.style.maxHeight = 'none';
+                text.style.marginBottom = '40px';
+                text.style.overflow = 'visible';
+
+                block.style.display = 'none';
+
+                more.style.top = 'auto';
+                more.style.bottom = '-1.5em';
+                more.innerHTML = 'свернуть';
+
+                text.setAttribute('data-status', 'open');
+            } else {
+                text.style.maxHeight = '16.5em';
+                text.style.marginBottom = '20px';
+                text.style.overflow = 'hidden';
+
+                block.style.display = 'block';
+
+                more.style.top = 'calc(15em - 4px)';
+                more.style.bottom = 'auto';
+                more.innerHTML = 'читать далее';
+
+                text.setAttribute('data-status', 'close');
+            }
+
+
+        })
+    });
+</script>
 </body>
 </html>
