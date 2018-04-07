@@ -401,6 +401,7 @@
 }
 .book__description {
   font-size: 16px;
+  line-height: 1.5;
 }
 @media screen and (max-width: 479px) {
   .book__description {
@@ -711,6 +712,14 @@
 .review-grade__button:disabled {
   border-color: #efefef;
   background: #f5f8fa;
+}
+.review-grade__button:disabled:hover {
+  border-color: #efefef;
+  cursor: auto;
+}
+.review-grade__button:hover {
+  border-color: #c9c8c8;
+  cursor: pointer;
 }
 .user {
   max-width: 900px;
