@@ -168,9 +168,9 @@
                     </div>
                     <div class="block-content-main">
                         <div class="review__element">
-                            <div class="review-rating" data-rating = "7">
+                            <div class="review-rating" data-rating = "5">
                                 <div class="review-rating__header">
-                                    7.0
+                                    5.0
                                 </div>
                                 <div class="review-rating-stars">
                                     <svg class="review-rating__star review-rating__star_active">
@@ -188,10 +188,10 @@
                                     <svg class="review-rating__star review-rating__star_active">
                                         <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
                                     </svg>
-                                    <svg class="review-rating__star review-rating__star_active">
+                                    <svg class="review-rating__star">
                                         <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
                                     </svg>
-                                    <svg class="review-rating__star review-rating__star_active">
+                                    <svg class="review-rating__star">
                                         <polygon id="star" points="11,0 14.23,6.55  21.46,7.6  16.23,12.7 17.47,19.9 11,16.5 4.53,19.9 6.77,12.7 0.54,7.6 7.77,6.55"></polygon>
                                     </svg>
                                     <svg class="review-rating__star">

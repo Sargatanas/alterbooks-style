@@ -60,50 +60,11 @@
     }
 
 
-    &[data-rating="10"] {
-        @color: @green;
-        &:after {
-            background: @color;
-        }
-        & .review-rating__header {
-            background: @color;
-        }
-        & .review-rating__star {
-            &_active {
-                fill: @color;
-            }
-        }
-    }
-    &[data-rating="9"] {
-        @color: #7cad1e;
-        &:after {
-            background: @color;
-        }
-        & .review-rating__header {
-            background: @color;
-        }
-        & .review-rating__star {
-            &_active {
-                fill: @color;
-            }
-        }
-    }
-    &[data-rating="8"] {
-        @color: #a1af1c;
-        &:after {
-            background: @color;
-        }
-        & .review-rating__header {
-            background: @color;
-        }
-        & .review-rating__star {
-            &_active {
-                fill: @color;
-            }
-        }
-    }
+    &[data-rating="10"],
+    &[data-rating="9"],
+    &[data-rating="8"],
     &[data-rating="7"] {
-        @color: #bfb82b;
+        @color: #1cba00;
         &:after {
             background: @color;
         }
@@ -116,36 +77,10 @@
             }
         }
     }
-    &[data-rating="6"] {
-        @color: #d3b740;
-        &:after {
-            background: @color;
-        }
-        & .review-rating__header {
-            background: @color;
-        }
-        & .review-rating__star {
-            &_active {
-                fill: @color;
-            }
-        }
-    }
-    &[data-rating="5"] {
-        @color: #ddac33;
-        &:after {
-            background: @color;
-        }
-        & .review-rating__header {
-            background: @color;
-        }
-        & .review-rating__star {
-            &_active {
-                fill: @color;
-            }
-        }
-    }
+    &[data-rating="6"],
+    &[data-rating="5"],
     &[data-rating="4"] {
-        @color: #db8f35;
+        @color: #f3b134;
         &:after {
             background: @color;
         }
@@ -158,36 +93,10 @@
             }
         }
     }
-    &[data-rating="3"] {
-        @color: #d67b29;
-        &:after {
-            background: @color;
-        }
-        & .review-rating__header {
-            background: @color;
-        }
-        & .review-rating__star {
-            &_active {
-                fill: @color;
-            }
-        }
-    }
-    &[data-rating="2"] {
-        @color: #dd582f;
-        &:after {
-            background: @color;
-        }
-        & .review-rating__header {
-            background: @color;
-        }
-        & .review-rating__star {
-            &_active {
-                fill: @color;
-            }
-        }
-    }
+    &[data-rating="3"] ,
+    &[data-rating="2"],
     &[data-rating="1"] {
-        @color: #d24a43;
+        @color: #eb502a;
         &:after {
             background: @color;
         }

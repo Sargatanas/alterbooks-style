@@ -511,95 +511,53 @@
   height: 22px;
   fill: #c9c8c8;
 }
-.review-rating[data-rating="10"]:after {
-  background: #00aa38;
-}
-.review-rating[data-rating="10"] .review-rating__header {
-  background: #00aa38;
-}
-.review-rating[data-rating="10"] .review-rating__star_active {
-  fill: #00aa38;
-}
-.review-rating[data-rating="9"]:after {
-  background: #7cad1e;
-}
-.review-rating[data-rating="9"] .review-rating__header {
-  background: #7cad1e;
-}
-.review-rating[data-rating="9"] .review-rating__star_active {
-  fill: #7cad1e;
-}
-.review-rating[data-rating="8"]:after {
-  background: #a1af1c;
-}
-.review-rating[data-rating="8"] .review-rating__header {
-  background: #a1af1c;
-}
-.review-rating[data-rating="8"] .review-rating__star_active {
-  fill: #a1af1c;
-}
+.review-rating[data-rating="10"]:after,
+.review-rating[data-rating="9"]:after,
+.review-rating[data-rating="8"]:after,
 .review-rating[data-rating="7"]:after {
-  background: #bfb82b;
+  background: #1cba00;
 }
+.review-rating[data-rating="10"] .review-rating__header,
+.review-rating[data-rating="9"] .review-rating__header,
+.review-rating[data-rating="8"] .review-rating__header,
 .review-rating[data-rating="7"] .review-rating__header {
-  background: #bfb82b;
+  background: #1cba00;
 }
+.review-rating[data-rating="10"] .review-rating__star_active,
+.review-rating[data-rating="9"] .review-rating__star_active,
+.review-rating[data-rating="8"] .review-rating__star_active,
 .review-rating[data-rating="7"] .review-rating__star_active {
-  fill: #bfb82b;
+  fill: #1cba00;
 }
-.review-rating[data-rating="6"]:after {
-  background: #d3b740;
-}
-.review-rating[data-rating="6"] .review-rating__header {
-  background: #d3b740;
-}
-.review-rating[data-rating="6"] .review-rating__star_active {
-  fill: #d3b740;
-}
-.review-rating[data-rating="5"]:after {
-  background: #ddac33;
-}
-.review-rating[data-rating="5"] .review-rating__header {
-  background: #ddac33;
-}
-.review-rating[data-rating="5"] .review-rating__star_active {
-  fill: #ddac33;
-}
+.review-rating[data-rating="6"]:after,
+.review-rating[data-rating="5"]:after,
 .review-rating[data-rating="4"]:after {
-  background: #db8f35;
+  background: #f3b134;
 }
+.review-rating[data-rating="6"] .review-rating__header,
+.review-rating[data-rating="5"] .review-rating__header,
 .review-rating[data-rating="4"] .review-rating__header {
-  background: #db8f35;
+  background: #f3b134;
 }
+.review-rating[data-rating="6"] .review-rating__star_active,
+.review-rating[data-rating="5"] .review-rating__star_active,
 .review-rating[data-rating="4"] .review-rating__star_active {
-  fill: #db8f35;
+  fill: #f3b134;
 }
-.review-rating[data-rating="3"]:after {
-  background: #d67b29;
-}
-.review-rating[data-rating="3"] .review-rating__header {
-  background: #d67b29;
-}
-.review-rating[data-rating="3"] .review-rating__star_active {
-  fill: #d67b29;
-}
-.review-rating[data-rating="2"]:after {
-  background: #dd582f;
-}
-.review-rating[data-rating="2"] .review-rating__header {
-  background: #dd582f;
-}
-.review-rating[data-rating="2"] .review-rating__star_active {
-  fill: #dd582f;
-}
+.review-rating[data-rating="3"]:after,
+.review-rating[data-rating="2"]:after,
 .review-rating[data-rating="1"]:after {
-  background: #d24a43;
+  background: #eb502a;
 }
+.review-rating[data-rating="3"] .review-rating__header,
+.review-rating[data-rating="2"] .review-rating__header,
 .review-rating[data-rating="1"] .review-rating__header {
-  background: #d24a43;
+  background: #eb502a;
 }
+.review-rating[data-rating="3"] .review-rating__star_active,
+.review-rating[data-rating="2"] .review-rating__star_active,
 .review-rating[data-rating="1"] .review-rating__star_active {
-  fill: #d24a43;
+  fill: #eb502a;
 }
 .review__avatar {
   width: 97px;
