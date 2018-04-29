@@ -248,7 +248,7 @@
                                             и SMM-менеджеры, и контент-маркетологи, и копирайтеры. Все хотят знать,
                                             как писать, чтобы их читали?!
 
-                                            <div class="review-text__block">...</div>
+                                            <div class="review-text__block"></div>
                                             <button class="review-text__more">читать далее</button>
                                         </div>
                                         <div class="review-grade col-12 col-clear">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        Book-profile
+        Pages
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -28,6 +28,9 @@
                 </a>
                 <a class="user-book__button button col-12" href="/pages/user.php">
                     <span>профиль пользователя</span>
+                </a>
+                <a class="user-book__button button col-12" href="/pages/book-list.php">
+                    <span>список книг</span>
                 </a>
             </div>
         </div>
