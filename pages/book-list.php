@@ -36,6 +36,23 @@
                         <input class="book-list-search__input" id="book-search" type="text"
                                placeholder="название произведения">
                         <input class="book-list-search__button" type="submit" value="">
+                        <div class="book-list-search-variants">
+                            <a class="book-list-search-variants__element" href="">
+                                вариа-а-а-а-а-а-а-а-а-а-а-а-а-а-а-а-а-а-а-а-а-а-а-а-а-ант 1
+                            </a>
+                            <a class="book-list-search-variants__element" href="">
+                                вариант 2
+                            </a>
+                            <a class="book-list-search-variants__element" href="">
+                                вариант 3
+                            </a>
+                            <a class="book-list-search-variants__element" href="">
+                                вариант 4
+                            </a>
+                            <a class="book-list-search-variants__element" href="">
+                                вариант 5
+                            </a>
+                        </div>
                     </form>
                 </div>
 
@@ -92,7 +109,7 @@
 
                 block.style.display = 'none';
 
-                more.style.bottom = '-15px';
+                more.style.bottom = '-25px';
                 more.style.top = 'auto';
                 more.innerHTML = 'свернуть';
             } else {

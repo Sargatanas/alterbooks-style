@@ -1,5 +1,5 @@
 .body {
-  background: #f5f8fa;
+  background: url("/css/img/background.jpg");
   font-family: Verdana, sans-serif;
   font-size: 18px;
 }
@@ -33,12 +33,12 @@
   background: #f4f4f4;
 }
 .button_green {
-  background: #1cba00;
+  background: #00aa38;
   border: none;
   color: white;
 }
 .button_green:hover {
-  background: #79d866;
+  background: #1cba00;
 }
 .button_green:active {
   background: #009b31;
@@ -638,7 +638,7 @@
   z-index: 10;
   width: calc(100% - 20px);
   height: 1.5em;
-  background: linear-gradient(to right, transparent 0%, #f5f8fa 40%, #f5f8fa 100%);
+  background: linear-gradient(to right, transparent 0%, url("/css/img/background.jpg") 40%, url("/css/img/background.jpg") 100%);
 }
 .review-text__more {
   position: absolute;
@@ -682,7 +682,7 @@
 }
 .review-grade__button:disabled {
   border-color: #efefef;
-  background: #f5f8fa;
+  background: url("/css/img/background.jpg");
 }
 .review-grade__button:disabled:hover {
   border-color: #efefef;
@@ -985,7 +985,7 @@
   background: #f5f8fa;
 }
 .book-list-element-genres__element_active {
-  background: #f5f8fa;
+  background: url("/css/img/background.jpg");
 }
 .book-list-element-genres__element_active:hover {
   cursor: auto;
@@ -1041,6 +1041,10 @@
     display: none;
   }
 }
+.book-list-element__button {
+  min-height: 35px;
+  margin-top: 10px;
+}
 .book-list-search {
   position: relative;
   width: 100%;
@@ -1058,7 +1062,7 @@
   font-size: 16px;
 }
 .book-list-search__input::placeholder {
-  color: #c9c8c8;
+  color: #979695;
   font-size: 14px;
   margin-bottom: 5px;
 }
@@ -1079,6 +1083,40 @@
 }
 .book-list-search__button:hover {
   background-image: url("/css/img/icons/search_green.svg");
+}
+.book-list-search-variants {
+  position: absolute;
+  top: 35px;
+  left: 5px;
+  z-index: 100;
+  display: none;
+  width: calc(100% - 50px);
+  padding: 5px 0 10px;
+  background: white;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.book-list-search-variants__element {
+  display: block;
+  overflow: hidden;
+  margin: 0 10px 0 15px;
+  padding: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #6b6966;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.book-list-search-variants__element:last-child {
+  border-bottom: none;
+}
+.book-list-search-variants__element:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #00aa38;
+}
+.book-list-search__input:focus ~ .book-list-search-variants {
+  display: block;
 }
 .book-list-sort {
   flex-wrap: wrap;
@@ -1121,13 +1159,13 @@
 }
 .book-list-sort input[type="radio"]:checked + .book-list-sort__element {
   border-color: #1cba00;
-  background: #f5f8fa;
+  background: url("/css/img/background.jpg");
   color: #009b31;
   cursor: auto;
 }
 .book-list-sort input[type="radio"]:checked + .book-list-sort__element:hover {
   border-color: #1cba00;
-  background: #f5f8fa;
+  background: url("/css/img/background.jpg");
   color: #009b31;
 }
 @keyframes display {
@@ -1172,6 +1210,7 @@
   background: white;
   font-size: 16px;
   user-select: none;
+  transition-duration: 0.2s;
 }
 .book-list-genres__element:hover {
   border-color: #c9c8c8;
@@ -1181,7 +1220,7 @@
 .book-list-genres input[type="checkbox"]:checked + .book-list-genres__element {
   order: -1;
   border-color: #1cba00;
-  background: #f5f8fa;
+  background: url("/css/img/background.jpg");
   color: #009b31;
 }
 .book-list-genres input[type="checkbox"]:checked + .book-list-genres__element:hover {
@@ -1205,7 +1244,7 @@
   left: 0;
   width: 100%;
   height: 40px;
-  background: #f5f8fa;
+  background: url("/css/img/background.jpg");
 }
 .book-list-genres__more {
   position: absolute;
@@ -1237,6 +1276,8 @@
     flex-wrap: wrap;
   }
   .book-list-genres .book-list-genres__element {
+    flex-grow: 1;
+    text-align: center;
     width: auto;
     margin-right: 10px;
     margin-bottom: 10px;

@@ -119,6 +119,15 @@
                         </div>
                     </a>
                 </div>
+                <div class="col-12 col-clear">
+                    <div class="row row-end">
+                        <div class="col-3 col-clear col-lg-4 col-lg-clear col-md-5 col-md-clear col-sm-12 col-sm-clear">
+                            <a class="book-list-element__button button button_green" href="">
+                                читать
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@
         font-size: 16px;
 
         &::placeholder {
-            color: @grey;
+            color: @darkergrey;
             font-size: 14px;
             margin-bottom: 5px;
         }
@@ -46,5 +46,50 @@
         &:hover {
             background-image: url("/css/img/icons/search_green.svg");
         }
+    }
+
+    &-variants {
+        position: absolute;
+        top: 35px;
+        left: 5px;
+        z-index: 100;
+
+        display: none;
+        width: ~"calc(100% - 50px)";
+
+        padding: 5px 0 10px;
+
+        background: white;
+        box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
+
+        &__element {
+            display: block;
+            overflow: hidden;
+
+            margin: 0 10px 0 15px;
+            padding: 10px;
+
+            border-bottom: 1px solid @lightgrey;
+            border-radius: 5px;
+
+            font-size: 14px;
+            color: @darkgrey;
+            text-decoration: none;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.05);
+                color: @darkergreen;
+            }
+        }
+    }
+
+    &__input:focus ~ &-variants {
+        display: block;
     }
 }
