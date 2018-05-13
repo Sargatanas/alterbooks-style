@@ -8,6 +8,10 @@
         margin-left: 0;
     }
 
+    @media screen and (max-width: @sm) {
+        font-size: 14px;
+    }
+
     // обрезка текста под cut
     overflow-y: hidden;
     position: relative;
@@ -26,7 +30,11 @@
         width: ~"calc(100% - 20px)";
         height: 1.5em;
 
-        background: linear-gradient(to right, transparent 0%, @transparent 40%, @transparent 100%);
+        background: linear-gradient(to right, transparent 0%, white 40%, white 100%);
+
+        @media screen and (max-width: @sm) {
+            top: 15em;
+        }
     }
 
     &__more {
@@ -44,5 +52,9 @@
         text-decoration: underline;
 
         cursor: pointer;
+
+        @media screen and (max-width: @sm) {
+            top: 15em;
+        }
     }
 }

@@ -32,6 +32,9 @@
                 <a class="user-book__button button col-12" href="/pages/book-list.php">
                     <span>список книг</span>
                 </a>
+                <a class="user-book__button button col-12" href="/pages/registration.php">
+                    <span>регистрация-авторизация</span>
+                </a>
             </div>
         </div>
     </div>

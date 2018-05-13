@@ -149,6 +149,21 @@
             genre.checked = genres_checked.indexOf(genre.value) !== -1;
         });
     }
+
+    let descriptions = document.getElementsByClassName('book-list-element-description__more');
+    Array.prototype.forEach.call(descriptions, function(more){
+        more.addEventListener('click', function (m) {
+            let parent = more.parentNode;
+            console.log('yes');
+            if (parent.getAttribute('data-status') === 'close') {
+                more.innerHTML = 'свернуть';
+                parent.setAttribute('data-status', 'open');
+            } else {
+                more.innerHTML = 'читать далее';
+                parent.setAttribute('data-status', 'close');
+            }
+        });
+    });
 </script>
 </body>
 </html>

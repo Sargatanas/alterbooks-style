@@ -8,17 +8,14 @@
     }
 
     // обрезка текста под cut
-    overflow-y: hidden;
     position: relative;
     width: 200px;
-    max-height: 9em;
 
     &__block {
         position: absolute;
         left: 20px;
         top: 7.5em;
 
-        display: flex;
         align-items: center;
         z-index: 10;
 
@@ -30,7 +27,6 @@
 
     &__more {
         position: absolute;
-        top: 7.5em;
         right: 0;
         z-index: 20;
 
@@ -46,5 +42,32 @@
         text-decoration: underline;
 
         cursor: pointer;
+    }
+
+
+    &[data-status="open"] {
+        max-height: none;
+        margin-bottom: 40px;
+        overflow: visible;
+    }
+    &[data-status="open"] &__block {
+        display: none;
+    }
+    &[data-status="open"] &__more {
+        top: auto;
+        bottom: -1.5em;
+    }
+
+    &[data-status="close"] {
+        max-height: 9em;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+    &[data-status="close"] &__block {
+        display: flex;
+    }
+    &[data-status="close"] &__more {
+        top: 7.5em;
+        bottom: auto;
     }
 }

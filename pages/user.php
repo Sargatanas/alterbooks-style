@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="profile__main col-8 col-md-12">
+                <div class="user__main col-8 col-md-12">
                     <div class="row row-center">
                         <div class="user__name col-12 col-clear col-md-11 col-md-center col-sm-12">
                             Пермякова Ксения Александровна

@@ -31,7 +31,7 @@
                         ?>
                     </div>
 
-                    <div class="book-list-element-description col-12 col-md-0">
+                    <div class="book-list-element-description col-12 col-md-0" data-status="close">
                         За две недели до сдачи макета я вдруг понял, что ОБЛОЖКУ-ТО МЫ ЗАБЫЛИ! Забыли напрочь:
                         не обсудили, не задали вопросов, не задумались, — ничего. Ни издательство, ни мы с
                         Людой понятия не имели, что должно быть на обложке. Только моя мама говорила, что череп
@@ -41,8 +41,7 @@
                         без. И где-то в глубине души я думал, что это и есть та самая, правильная обложка.
                         В стиле Главреда: смело, радикально, просто...
                         <div class="book-list-element-description__block"></div>
-                        <a class="book-list-element-description__more"
-                           href="/pages/book.php">
+                        <a class="book-list-element-description__more">
                             читать далее
                         </a>
                     </div>

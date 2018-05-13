@@ -160,14 +160,14 @@
                     </div>
                 </div>
                 <div class="review block-content col-12">
-                    <div class="block-content-header">
-                        <div class="block-content-header__title block-content-header__title_center">
+                    <div class="block-content-header" id="review">
+                        <div class="review__header block-content-header__title block-content-header__title_center">
                             Рецензии
                         </div>
                         <hr class="block-content-header__hr">
                     </div>
                     <div class="block-content-main">
-                        <div class="review__element">
+                        <div class="review-element">
                             <div class="review-rating" data-rating = "5">
                                 <div class="review-rating__header">
                                     5.0
@@ -205,7 +205,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="row row-center">
+                            <div class="review-element__body row row-center">
                                 <div class="review__aside col-2 col-lg-0">
                                     <div class="review__avatar"
                                          style="background-image: url('/css/img/avatar.png')"></div>
@@ -266,7 +266,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="review__element">
+                        <div class="review-element">
                             <div class="review-rating" data-rating = "10">
                                 <div class="review-rating__header">
                                     10.0
@@ -304,7 +304,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="row row-center">
+                            <div class="review-element__body row row-center">
                                 <div class="review__aside col-2 col-lg-0">
                                     <div class="review__avatar"
                                          style="background-image: url('/css/img/avatar.png')"></div>
@@ -358,7 +358,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="review__element">
+                        <div class="review-element">
                             <div class="review-rating" data-rating = "1">
                                 <div class="review-rating__header">
                                     1.0
@@ -396,7 +396,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="row row-center">
+                            <div class="review-element__body row row-center">
                                 <div class="review__aside col-2 col-lg-0">
                                     <div class="review__avatar"
                                          style="background-image: url('/css/img/avatar.png')"></div>
@@ -435,7 +435,7 @@
                                             <div class="review-grade__value">
                                                 -2
                                             </div>
-                                            <button class="review-grade__button disabled">
+                                            <button class="review-grade__button" disabled>
                                                 &plus;
                                             </button>
                                         </div>

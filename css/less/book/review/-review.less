@@ -2,18 +2,38 @@
     max-width: 900px;
     margin-top: 80px;
 
-    &__element {
+    &__header {
+        font-size: 18px;
+    }
+
+    &-element {
         width: 100%;
+        box-sizing: border-box;
+
         margin-bottom: 40px;
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &__body {
+            padding: 10px 10px 20px;
+            border: 1px solid #eeeeee;
+            border-top: none;
+            background: white;
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.05);
         }
     }
 
     &__main {
         display: flex;
         flex-direction: column;
+        padding-left: 0;
         font-size: 17px;
+
+        @media screen and (max-width: @lg) {
+            padding-left: 10px;
+            padding-right: 20px;
+        }
     }
 }
