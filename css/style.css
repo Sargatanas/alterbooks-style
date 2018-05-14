@@ -1508,6 +1508,11 @@
   right: 0;
   border-left-color: transparent;
 }
+@media screen and (max-width: 479px) {
+  .registration-element__flag {
+    right: 5px;
+  }
+}
 .registration-element__error {
   position: absolute;
   left: 20px;
@@ -1584,6 +1589,16 @@
 }
 .registration-more__element:hover {
   opacity: 0.8;
+}
+@media screen and (max-width: 479px) {
+  .registration-more__element {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }
+  .registration-more__element:last-child {
+    margin-right: 0;
+  }
 }
 .registration__button {
   max-width: 250px;
