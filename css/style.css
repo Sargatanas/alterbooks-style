@@ -49,7 +49,7 @@
   color: white;
 }
 .button_red:hover {
-  background: #ff6f47;
+  background: #ff7752;
 }
 .button_red:active {
   background: #c7320a;
@@ -174,11 +174,23 @@
   flex-direction: row;
   margin-bottom: 15px;
 }
+@media screen and (max-width: 380px) {
+  .block-content-main__element {
+    flex-wrap: wrap;
+  }
+}
 .block-content-main__title,
 .block-content-main__info {
   display: flex;
   min-width: 150px;
   font-size: 15px;
+}
+@media screen and (max-width: 500px) {
+  .block-content-main__title,
+  .block-content-main__info {
+    font-size: 14px;
+    min-width: 120px;
+  }
 }
 .block-content-main__title {
   justify-content: flex-end;
@@ -187,6 +199,14 @@
 }
 .block-content-main__title:after {
   content: ":";
+}
+@media screen and (max-width: 380px) {
+  .block-content-main__title {
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
 }
 .hr {
   width: 100%;
@@ -1406,4 +1426,169 @@
     left: 0;
     text-align: right;
   }
+}
+.registration {
+  max-width: 500px;
+}
+.registration__title {
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+.registration__hr {
+  font-size: 16px;
+  text-transform: lowercase;
+}
+.registration__separator {
+  font-size: 16px;
+  text-transform: lowercase;
+}
+.registration-element {
+  position: relative;
+  margin-right: 40px;
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+.registration-element__field {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  box-sizing: content-box;
+  padding-left: 20px;
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+  font-size: 14px;
+}
+.registration-element__field::placeholder {
+  color: #c8c8c8;
+}
+.registration-element__field:focus {
+  outline: none;
+  border: 1px solid #979695;
+}
+.registration-element__field:active {
+  outline: none;
+}
+.registration-element__logo {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  z-index: 100;
+  width: 20px;
+  height: 20px;
+}
+.registration-element__logo + .registration-element__field {
+  padding-left: 45px;
+}
+.registration-element__flag {
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  width: 28px;
+  height: 10px;
+  background: #c8c8c8;
+}
+.registration-element__flag:before,
+.registration-element__flag:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 14px;
+  height: 10px;
+  box-sizing: border-box;
+  border: 7px solid #c9c8c8;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-bottom-color: transparent;
+}
+.registration-element__flag:before {
+  left: 0;
+  border-right-color: transparent;
+}
+.registration-element__flag:after {
+  right: 0;
+  border-left-color: transparent;
+}
+.registration-element__error {
+  position: absolute;
+  left: 20px;
+  bottom: -17px;
+  display: none;
+  width: calc(100% - 22px);
+  font-size: 12px;
+  color: red;
+}
+.registration-element[data-status="correct"] .registration-element__field {
+  border-color: #79d866;
+  color: #00aa38;
+}
+.registration-element[data-status="correct"] .registration-element__flag {
+  height: 28px;
+  background: #00aa38 url("/css/img/icons/checkmark_white.svg") no-repeat 50% 60%;
+  background-size: 65% auto;
+}
+.registration-element[data-status="correct"] .registration-element__flag:before,
+.registration-element[data-status="correct"] .registration-element__flag:after {
+  border-color: #00aa38;
+  border-bottom-color: transparent;
+}
+.registration-element[data-status="correct"] .registration-element__flag:before {
+  border-right-color: transparent;
+}
+.registration-element[data-status="correct"] .registration-element__flag:after {
+  border-left-color: transparent;
+}
+.registration-element[data-status="error"] .registration-element__field {
+  border-color: red;
+  color: red;
+}
+.registration-element[data-status="error"] .registration-element__flag {
+  background: #ff7752;
+}
+.registration-element[data-status="error"] .registration-element__flag:before,
+.registration-element[data-status="error"] .registration-element__flag:after {
+  border-color: #ff7752;
+  border-bottom-color: transparent;
+}
+.registration-element[data-status="error"] .registration-element__flag:before {
+  border-right-color: transparent;
+}
+.registration-element[data-status="error"] .registration-element__flag:after {
+  border-left-color: transparent;
+}
+.registration-element[data-status="error"] .registration-element__error {
+  display: block;
+}
+.registration-element__star {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  font-size: 18px;
+  color: red;
+}
+.registration-more {
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 35px;
+}
+.registration-more__element {
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.registration-more__element:last-child {
+  margin-right: 0;
+}
+.registration-more__element:hover {
+  opacity: 0.8;
+}
+.registration__button {
+  max-width: 250px;
+  min-height: 40px;
+  margin-bottom: 35px;
+  border-radius: 2px;
+  font-size: 16px;
 }

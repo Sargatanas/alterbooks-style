@@ -47,12 +47,21 @@
             display: flex;
             flex-direction: row;
             margin-bottom: 15px;
+
+            @media screen and (max-width: 380px) {
+                flex-wrap: wrap;
+            }
         }
 
         &__title, &__info {
             display: flex;
             min-width: 150px;
             font-size: 15px;
+
+            @media screen and (max-width: 500px) {
+                font-size: 14px;
+                min-width: 120px;
+            }
         }
 
         &__title {
@@ -62,6 +71,13 @@
 
             &:after {
                 content: ":";
+            }
+
+            @media screen and (max-width: 380px) {
+                justify-content: flex-start;
+                width: 100%;
+                margin-bottom: 10px;
+                text-decoration: underline;
             }
         }
     }
