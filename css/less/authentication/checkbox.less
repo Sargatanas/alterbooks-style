@@ -1,0 +1,21 @@
+.authentication__checkbox {
+    & .checkbox-animation__button {
+        width: 16px;
+        height: 16px;
+    }
+
+    & .checkbox__field:checked + .checkbox-animation > .checkbox-animation__icon::before {
+        top: .5em;
+        left: .1em;
+    }
+
+    & .checkbox__content {
+        padding-left: 30px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    @media screen and (max-width: 300px) {
+        margin: 0 auto;
+    }
+}

@@ -11,11 +11,20 @@
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="body">
+<body class="body" data-status="modal-close">
 
 <header class="header row row-center">
-    <div class="col-12 col-center col-middle">
-        He-e-e-e-e-ea-a-a-a-ader
+    <div class="col-6 col-lg-8 col-md-10 col-sm-12 col-sm-clear">
+        <div class="row row-center">
+            <div class="col-9 col-middle col-sm-7 col-sm-middle">
+                AlterBooks
+            </div>
+            <div class="col-3 col-sm-5">
+                <button class="modal-button button" id="header-button" data-modal-number="0">
+                    вход
+                </button>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -116,7 +125,6 @@
                              style="background-image: url('/css/img/social/twitter.svg')"></div>
                         <div class="registration-more__element"
                              style="background-image: url('/css/img/social/google.svg')"></div>
-
                     </div>
                 </div>
 
@@ -145,5 +153,31 @@
     </div>
 </main>
 
+<?php
+include 'authentication.php';
+?>
+
+<script>
+    let page_body = document.body;
+    let modal_button = document.getElementsByClassName('modal-button');
+    Array.prototype.forEach.call(modal_button, function(button){
+        button.addEventListener('click', function (b) {
+            let modal_number = button.getAttribute('data-modal-number');
+            let modal = document.getElementById('modal-' + modal_number);
+            page_body.setAttribute('data-status', 'modal-open');
+            modal.setAttribute('data-status', 'modal-open');
+        })
+    });
+
+    let modal_close_button = document.getElementsByClassName('authentication__close');
+    Array.prototype.forEach.call(modal_close_button, function(button){
+        button.addEventListener('click', function (b) {
+            let modal_number = button.getAttribute('data-modal-number');
+            let modal = document.getElementById('modal-' + modal_number);
+            page_body.setAttribute('data-status', 'modal-close');
+            modal.setAttribute('data-status', 'modal-close');
+        })
+    });
+</script>
 </body>
 </html>
