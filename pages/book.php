@@ -471,7 +471,7 @@
 
                 text.setAttribute('data-status', 'open');
             } else {
-                text.style.maxHeight = '16.5em';
+                text.style.maxHeight = '16em';
                 text.style.marginBottom = '20px';
                 text.style.overflow = 'hidden';
 

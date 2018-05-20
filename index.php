@@ -35,6 +35,9 @@
                 <a class="user-book__button button col-12" href="/pages/registration.php">
                     <span>регистрация-авторизация</span>
                 </a>
+                <a class="user-book__button button col-12" href="/pages/change-password.php">
+                    <span>сменить пароль</span>
+                </a>
             </div>
         </div>
     </div>

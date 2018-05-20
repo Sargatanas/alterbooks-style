@@ -102,6 +102,18 @@
 .checkbox__field[disabled]:not(:checked) + .checkbox-animation > .checkbox-animation__ripple {
     animation: none;
 }
+.checkbox__content {
+    display: block;
+    padding: 2px 0 0 35px;
+    font-size: 14px;
+    line-height: 18px;
+    cursor: pointer;
+    user-select: none;
+}
+.checkbox__field[disabled] + * + .checkbox__content {
+    color: #c0c0c0;
+    cursor: default;
+}
 @keyframes checkBackgroundOn {
     0% {
         border-color: lightgrey;
@@ -148,16 +160,4 @@
         border-color: white;
         transform: translate3d(0, -12px, 0) rotate(45deg);
     }
-}
-.checkbox__content {
-    display: block;
-    padding: 2px 0 0 35px;
-    font-size: 14px;
-    line-height: 18px;
-    cursor: pointer;
-    user-select: none;
-}
-.checkbox__field[disabled] + * + .checkbox__content {
-    color: #c0c0c0;
-    cursor: default;
 }

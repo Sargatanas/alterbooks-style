@@ -30,14 +30,13 @@
 
 <main class="container">
     <div class="row row-center">
-        <div class="registration col-8 col-clear col-md-10 col-md-clear">
+        <div class="registration re-password col-8 col-clear col-md-10 col-md-clear" data-status="">
             <div class="row row-center">
                 <div class="registration__title col-12 col-clear col-center">
-                    регистрация
+                    введите новый пароль
                 </div>
 
-
-                <div class="registration-element col-12 col-clear" data-status="correct">
+                <div class="registration-element col-12 col-clear" data-status="">
                     <div class="registration-element__logo"
                          style="background-image: url('/css/img/icons/user_grey.svg')"></div>
                     <input class="registration-element__field"
@@ -45,13 +44,8 @@
                            id="login"
                            name="login"
                            placeholder="электронная почта / логин"
-                           required autofocus
+                           required disabled
                            value="sargatanas@mail.ru">
-                    <div class="registration-element__flag"></div>
-                    <div class="registration-element__error">
-                        пользователь с таким логином существует
-                    </div>
-                    <div class="registration-element__star">*</div>
                 </div>
 
                 <div class="registration-element col-12 col-clear" data-status="">
@@ -62,12 +56,12 @@
                            id="password"
                            name="password"
                            placeholder="пароль"
-                           required
+                           required autofocus
                            value="sargatanas@mail">
                     <div class="registration-element__star">*</div>
                 </div>
 
-                <div class="registration-element col-12 col-clear" data-status="error">
+                <div class="registration-element col-12 col-clear" data-status="correct">
                     <div class="registration-element__logo"
                          style="background-image: url('/css/img/icons/lock-closed_grey.svg')"></div>
                     <input class="registration-element__field registration-element__field_logo"
@@ -76,7 +70,7 @@
                            name="re-password"
                            placeholder="повторите пароль"
                            required
-                           value="sargatanas@mail.ru">
+                           value="sargatanas@mail">
                     <div class="registration-element__flag"></div>
                     <div class="registration-element__error">
                         пароли не совпадают
@@ -84,69 +78,20 @@
                     <div class="registration-element__star">*</div>
                 </div>
 
-                <div class="registration-element col-12 col-clear">
-                    <input class="registration-element__field"
-                           type="text"
-                           id="surname"
-                           name="surname"
-                           placeholder="фамилия">
-                </div>
-
-                <div class="registration-element col-12 col-clear">
-                    <input class="registration-element__field"
-                           type="text"
-                           id="name"
-                           name="name"
-                           placeholder="имя">
-                </div>
-                <div class="registration-element col-12 col-clear">
-                    <input class="registration-element__field"
-                           type="text"
-                           id="nickname"
-                           name="nickname"
-                           placeholder="псевдоним">
-                </div>
-
-
-                <div class="block-content col-12 col-clear">
-                    <div class="registration__hr block-content-header block-content-header_center">
-                        <hr class="block-content-header__hr">
-                        <div class="registration__separator block-content-header__title">
-                            или
-                        </div>
-                        <hr class="block-content-header__hr">
-                    </div>
-                    <div class="registration-more block-content-main">
-                        <div class="registration-more__element"
-                             style="background-image: url('/css/img/social/vk.svg')"></div>
-                        <div class="registration-more__element"
-                             style="background-image: url('/css/img/social/facebook.svg')"></div>
-                        <div class="registration-more__element"
-                             style="background-image: url('/css/img/social/twitter.svg')"></div>
-                        <div class="registration-more__element"
-                             style="background-image: url('/css/img/social/google.svg')"></div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-clear col-center">
+                <div class="re-password__button col-12 col-clear col-center">
                     <button class="registration__button button button_green">
-                        регистрация
+                        изменить пароль
                     </button>
                 </div>
 
-                <div class="block-content col-12 col-clear">
-                    <div class="registration__hr block-content-header block-content-header_center">
-                        <hr class="block-content-header__hr">
-                        <div class="registration__separator block-content-header__title">
-                            уже&nbsp;зарегистрированы?
-                        </div>
-                        <hr class="block-content-header__hr">
-                    </div>
-                    <div class="registration-more block-content-main">
-                        <button class="registration__button button">
-                            авторизация
-                        </button>
-                    </div>
+                <div class="re-password__correct">
+                    Ваш пароль успешно изменен!
+                </div>
+
+                <div class="re-password__authentication col-12 col-clear col-center">
+                    <button class="registration__button button">
+                        авторизация
+                    </button>
                 </div>
             </div>
         </div>
@@ -156,6 +101,7 @@
 <?php
 include 'authentication.php';
 ?>
+
 
 <script>
     let page_body = document.body;
@@ -196,6 +142,14 @@ include 'authentication.php';
             let authentication = re_password.previousSibling.previousSibling;
             re_password.setAttribute('data-status', 'close');
             authentication.setAttribute('data-status', 'open');
+        });
+    });
+
+    let change_password = document.getElementsByClassName('re-password__button');
+    Array.prototype.forEach.call(change_password, function(button){
+        button.addEventListener('click', function (b) {
+            let change_password = button.parentNode.parentNode;
+            change_password.setAttribute('data-status', 'correct')
         });
     });
 </script>

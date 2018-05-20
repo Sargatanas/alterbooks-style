@@ -198,6 +198,18 @@
 .checkbox__field[disabled]:not(:checked) + .checkbox-animation > .checkbox-animation__ripple {
   animation: none;
 }
+.checkbox__content {
+  display: block;
+  padding: 2px 0 0 35px;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+  user-select: none;
+}
+.checkbox__field[disabled] + * + .checkbox__content {
+  color: #c0c0c0;
+  cursor: default;
+}
 @keyframes checkBackgroundOn {
   0% {
     border-color: lightgrey;
@@ -244,18 +256,6 @@
     border-color: white;
     transform: translate3d(0, -12px, 0) rotate(45deg);
   }
-}
-.checkbox__content {
-  display: block;
-  padding: 2px 0 0 35px;
-  font-size: 14px;
-  line-height: 18px;
-  cursor: pointer;
-  user-select: none;
-}
-.checkbox__field[disabled] + * + .checkbox__content {
-  color: #c0c0c0;
-  cursor: default;
 }
 .block-info {
   flex-wrap: wrap;
@@ -835,7 +835,7 @@
   overflow-y: hidden;
   position: relative;
   width: 200px;
-  max-height: 16.5em;
+  max-height: 16em;
 }
 @media screen and (max-width: 767px) {
   .review-text {
@@ -1635,6 +1635,9 @@
 .registration-element__field::placeholder {
   color: #c8c8c8;
 }
+.registration-element__field:disabled {
+  background: white;
+}
 .registration-element__field:focus {
   outline: none;
   border: 1px solid #979695;
@@ -1781,16 +1784,52 @@
   border-radius: 2px;
   font-size: 16px;
 }
+.re-password__button,
+.re-password__authentication {
+  margin-top: 35px;
+}
+.re-password[data-status="correct"] .re-password__button {
+  display: none;
+}
+.re-password__authentication {
+  display: none;
+}
+.re-password__correct {
+  position: relative;
+  display: none;
+  color: #00aa38;
+}
+.re-password__correct:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 18px;
+  height: 18px;
+  background: url("/css/img/icons/checkmark.svg") no-repeat 50% 50%;
+  background-size: 100% auto;
+}
+.re-password[data-status="correct"] .re-password__correct,
+.re-password[data-status="correct"] .re-password__authentication {
+  display: flex;
+}
 .authentication {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 200;
-  display: none;
   overflow: auto;
   width: 100%;
   height: 100vh;
   background: rgba(74, 67, 74, 0.7);
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+.authentication-enter[data-status="close"] {
+  display: none;
+}
+.authentication-re-password[data-status="close"] {
+  display: none;
 }
 .authentication__window {
   position: relative;
@@ -1825,6 +1864,34 @@
 }
 .authentication[data-status="modal-open"] {
   display: block;
+  animation-name: showBackground;
+}
+.authentication[data-status="modal-close"] {
+  display: none;
+  transition-property: display;
+  transition-delay: 0.2s;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-name: hideBackground;
+}
+@keyframes showBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hideBackground {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .authentication-title {
   position: absolute;
@@ -1883,6 +1950,7 @@
 .authentication__checkbox .checkbox__field:checked + .checkbox-animation > .checkbox-animation__icon::before {
   top: .5em;
   left: .1em;
+  animation: checkIcon_small 125ms 250ms cubic-bezier(0.3, 0, 0.23, 1) forwards;
 }
 .authentication__checkbox .checkbox__content {
   padding-left: 30px;
@@ -1894,10 +1962,31 @@
     margin: 0 auto;
   }
 }
+@keyframes checkIcon_small {
+  0% {
+    width: 0;
+    height: 0;
+    border-color: white;
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  33% {
+    width: 4px;
+    height: 0;
+    transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  100% {
+    width: 4px;
+    height: 11px;
+    border-color: white;
+    transform: translate3d(0, -12px, 0) rotate(45deg);
+  }
+}
 .authentication__forget {
   font-size: 13px;
   line-height: 20px;
   color: black;
+  text-decoration: underline;
+  cursor: pointer;
 }
 @media screen and (max-width: 300px) {
   .authentication__forget {
@@ -1907,12 +1996,15 @@
   }
 }
 .authentication__button {
-  max-width: 200px;
+  max-width: 250px;
   min-height: 40px;
   margin-top: 30px;
   margin-bottom: 25px;
   border-radius: 2px;
   font-size: 16px;
+}
+.authentication__button_small {
+  max-width: 200px;
 }
 @media screen and (max-width: 479px) {
   .authentication__button {
@@ -1948,4 +2040,11 @@
     top: 17px;
     right: 5px;
   }
+}
+.authentication__back {
+  margin-top: -15px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
 }
