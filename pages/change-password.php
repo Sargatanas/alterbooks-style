@@ -38,18 +38,6 @@
 
                 <div class="registration-element col-12 col-clear" data-status="">
                     <div class="registration-element__logo"
-                         style="background-image: url('/css/img/icons/user_grey.svg')"></div>
-                    <input class="registration-element__field"
-                           type="text"
-                           id="login"
-                           name="login"
-                           placeholder="электронная почта / логин"
-                           required disabled
-                           value="sargatanas@mail.ru">
-                </div>
-
-                <div class="registration-element col-12 col-clear" data-status="">
-                    <div class="registration-element__logo"
                          style="background-image: url('/css/img/icons/lock-closed_grey.svg')"></div>
                     <input class="registration-element__field registration-element__field_logo"
                            type="password"

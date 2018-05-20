@@ -1635,9 +1635,6 @@
 .registration-element__field::placeholder {
   color: #c8c8c8;
 }
-.registration-element__field:disabled {
-  background: white;
-}
 .registration-element__field:focus {
   outline: none;
   border: 1px solid #979695;
@@ -1797,7 +1794,8 @@
 .re-password__correct {
   position: relative;
   display: none;
-  color: #00aa38;
+  margin-top: 10px;
+  color: #1cba00;
 }
 .re-password__correct:before {
   content: "";
