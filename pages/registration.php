@@ -198,6 +198,32 @@ include 'authentication.php';
             authentication.setAttribute('data-status', 'open');
         });
     });
+
+    let send_mail = document.getElementsByClassName('authentication__button_send');
+    Array.prototype.forEach.call(send_mail, function(button){
+        button.addEventListener('click', function (b) {
+            let send = button.parentNode.parentNode.parentNode;
+            send.setAttribute('data-status', 'correct');
+            let usual = send.previousSibling.previousSibling;
+            let time = document.getElementById('authentication__correct-message');
+
+            let seconds = 5;
+            time.innerHTML = seconds;
+            seconds--;
+            let time_id = setInterval(function () {
+                time.innerHTML = seconds;
+                seconds--;
+            }, 1000);
+
+            setTimeout(function () {
+                usual.parentNode.parentNode.setAttribute('data-status', 'modal-close');
+                page_body.setAttribute('data-status', 'modal-close');
+                usual.setAttribute('data-status', 'open');
+                send.setAttribute('data-status', 'close');
+                clearInterval(time_id);
+            }, 5000);
+        });
+    });
 </script>
 </body>
 </html>

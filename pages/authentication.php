@@ -1,6 +1,6 @@
-<div class="authentication" id="modal-0" data-status="modal-close">
+<div class="authentication" id="modal-0" data-status="modal-open">
     <div class="authentication__window">
-        <div class="authentication-enter" data-status="open">
+        <div class="authentication-enter" data-status="close">
             <div class="authentication-title">
                 авторизация
             </div>
@@ -100,7 +100,7 @@
         </div>
 
 
-        <div class="authentication-re-password" data-status="close">
+        <div class="authentication-re-password" data-status="">
             <div class="authentication-title">
                 забыли пароль?
             </div>
@@ -112,15 +112,21 @@
                            type="text"
                            id="re-login"
                            name="re-login"
-                           placeholder="логин"
+                           placeholder="электронная почта"
                            required autofocus>
                     <div class="registration-element__error">
-                        такого логина не существует
+                        нет аккаунта с такой электронной почтой
                     </div>
                 </div>
 
                 <div class="col-12 col-clear col-center">
-                    <button class="authentication__button button button_green">
+                    <div class="authentication__correct">
+                        Вам выслано сообщение
+                    </div>
+                </div>
+
+                <div class="col-12 col-clear col-center">
+                    <button class="authentication__button_send authentication__button button button_green">
                         восстановить
                     </button>
                 </div>
@@ -140,6 +146,10 @@
                         <hr class="block-content-header__hr">
                     </div>
                     <div class="authentication-more block-content-main">
+                        <div class="authentication__correct-message">
+                            окно автоматически закроется через
+                            <span id="authentication__correct-message"></span> сек.
+                        </div>
                         <button class="authentication__button button">
                             регистрация
                         </button>

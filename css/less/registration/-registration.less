@@ -14,5 +14,9 @@
     &__separator {
         font-size: 16px;
         text-transform: lowercase;
+
+        .authentication-re-password[data-status="correct"] & {
+            display: none;
+        }
     }
 }

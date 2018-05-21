@@ -1616,6 +1616,9 @@
   font-size: 16px;
   text-transform: lowercase;
 }
+.authentication-re-password[data-status="correct"] .registration__separator {
+  display: none;
+}
 .registration-element {
   position: relative;
   margin-right: 40px;
@@ -1941,6 +1944,9 @@
 .authentication-element[data-status="error"] .registration-element__error {
   display: block;
 }
+.authentication-re-password[data-status="correct"] .authentication-element {
+  display: none;
+}
 .authentication__checkbox .checkbox-animation__button {
   width: 16px;
   height: 16px;
@@ -2010,6 +2016,9 @@
     font-size: 14px;
   }
 }
+.authentication-re-password[data-status="correct"] .authentication__button {
+  display: none;
+}
 .authentication-more {
   align-items: center;
 }
@@ -2045,4 +2054,35 @@
   font-size: 14px;
   text-decoration: underline;
   cursor: pointer;
+}
+.authentication-re-password[data-status="correct"] .authentication__back {
+  display: none;
+}
+.authentication__correct {
+  position: relative;
+  display: none;
+  margin: 55px 0 30px 20px;
+  color: #1cba00;
+  font-size: 14px;
+}
+.authentication__correct:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 18px;
+  height: 18px;
+  background: url("/css/img/icons/checkmark.svg") no-repeat 50% 50%;
+  background-size: 100% auto;
+}
+.authentication-re-password[data-status="correct"] .authentication__correct {
+  display: block;
+}
+.authentication__correct-message {
+  display: none;
+  font-size: 14px;
+  color: #979695;
+}
+.authentication-re-password[data-status="correct"] .authentication__correct-message {
+  display: block;
 }
