@@ -1,4 +1,4 @@
-<div class="authentication" id="modal-0" data-status="modal-open">
+﻿<div class="authentication" id="modal-0" data-status="modal-close">
     <div class="authentication__window">
         <div class="authentication-enter" data-status="close">
             <div class="authentication-title">

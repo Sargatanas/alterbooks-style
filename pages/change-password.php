@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,7 @@
 
 <main class="container">
     <div class="row row-center">
-        <div class="registration re-password col-8 col-clear col-md-10 col-md-clear" data-status="">
+        <div class="registration re-password col-8 col-clear col-md-10 col-md-clear" data-status="modal-close">
             <div class="row row-center">
                 <div class="registration__title col-12 col-clear col-center">
                     введите новый пароль
@@ -138,6 +138,32 @@ include 'authentication.php';
         button.addEventListener('click', function (b) {
             let change_password = button.parentNode.parentNode;
             change_password.setAttribute('data-status', 'correct')
+        });
+    });
+
+    let send_mail = document.getElementsByClassName('authentication__button_send');
+    Array.prototype.forEach.call(send_mail, function(button){
+        button.addEventListener('click', function (b) {
+            let send = button.parentNode.parentNode.parentNode;
+            send.setAttribute('data-status', 'correct');
+            let usual = send.previousSibling.previousSibling;
+            let time = document.getElementById('authentication__correct-message');
+
+            let seconds = 5;
+            time.innerHTML = seconds;
+            seconds--;
+            let time_id = setInterval(function () {
+                time.innerHTML = seconds;
+                seconds--;
+            }, 1000);
+
+            setTimeout(function () {
+                usual.parentNode.parentNode.setAttribute('data-status', 'modal-close');
+                page_body.setAttribute('data-status', 'modal-close');
+                usual.setAttribute('data-status', 'open');
+                send.setAttribute('data-status', 'close');
+                clearInterval(time_id);
+            }, 5000);
         });
     });
 </script>
