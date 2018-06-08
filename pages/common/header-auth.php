@@ -3,7 +3,7 @@
         <div class="header-main__area">
             <a class="header-project-name"
                href="/index.php"></a>
-            <div class="header-main-buttons" data-auth="false">
+            <div class="header-main-buttons" data-auth="true">
                 <a class="header-main-buttons__element button-registration" href="/pages/registration.php">
                     регистрация
                 </a>
@@ -15,15 +15,14 @@
                 </div>
 
 
-
-                <div class="header-main-buttons__element header-main-buttons__element_user button-user"
-                     id="button-authentication"
-                     data-modal-number="1"
+                <input class="header-main-buttons__element_user-active" type="checkbox" id="user">
+                <label class="header-main-buttons__element header-main-buttons__element_user button-user"
+                     for="user"
                      title="sargatanaaaaaaaaaaaaaaas94@mail.ru">
                     sargatanaaaaaaaaaaaaaaas94@mail.ru
-                </div>
+                </label>
 
-                <div class="header-user" data-status="modal-close">
+                <div class="header-user" >
                     <div class="header-user__title">
                         <div class="header-user__avatar" 
                              style="background-image: url('/css/img/avatar.png')"></div>

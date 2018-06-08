@@ -14,7 +14,7 @@
 <body class="body" data-status="modal-close">
 
 <?php
-include "pages/common/header.php"
+include "pages/common/header-auth.php"
 ?>
 
 <main class="container">

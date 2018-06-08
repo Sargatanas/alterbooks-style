@@ -426,39 +426,19 @@
     margin: 0 7px;
   }
 }
-@font-face {
-  font-family: 'Appendix';
-  src: local('@');
-  src: url('/css/fonts/appendix/appendix-normal.ttf') format('ttf');
-  src: url('/css/fonts/appendix/appendix-normal.woff') format('woff');
-  src: url('/css/fonts/appendix/appendix-normal.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Tiranti';
-  src: local('@');
-  src: url('/css/fonts/tiranti/tiranti.ttf') format('ttf');
-  src: url('/css/fonts/tiranti/tiranti.woff') format('woff');
-  src: url('/css/fonts/tiranti/tiranti.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
 .header-project-name {
-  font-family: Tiranti, sans-serif;
-  font-size: 40px;
-  color: white;
-  text-decoration: none;
-}
-.header-project-name__special {
-  font-family: Appendix, serif;
-  font-size: 30px;
-  color: #9dd612;
+  display: block;
+  width: 196px;
+  height: 44px;
+  background: url("/css/img/logo.png") no-repeat center center;
+  background-size: 100% 100%;
 }
 .header-main-buttons {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
+  user-select: none;
 }
 .header-main-buttons__element {
   display: flex;
@@ -475,7 +455,7 @@
   margin-right: 0;
 }
 .header-main-buttons__element:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition-duration: 0.15s;
 }
@@ -486,6 +466,37 @@
   .header-main-buttons__element:last-child {
     margin-right: 0;
   }
+}
+.header-main-buttons__element_user {
+  display: none;
+  max-width: 250px;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-transform: none;
+}
+@media screen and (max-width: 479px) {
+  .header-main-buttons__element_user {
+    position: relative;
+    max-width: 0;
+    background-image: url("/css/img/icons/user_grey.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: transparent;
+  }
+}
+.header-main-buttons__element_user-active {
+  display: none;
+}
+.header-main-buttons[data-auth="true"] .header-main-buttons__element {
+  display: none;
+}
+.header-main-buttons[data-auth="true"] .header-main-buttons__element_user {
+  display: block;
 }
 @media screen and (max-width: 479px) {
   .button-registration {
@@ -519,6 +530,102 @@
   width: 1px;
   height: 26px;
   background: #979695;
+}
+.header-user {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  display: none;
+  width: 300px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid #e2e2e2;
+  background: white;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+}
+.header-user:after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 100px;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 10px solid white;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+@media screen and (max-width: 479px) {
+  .header-user:after {
+    right: 30px;
+  }
+}
+.header-user__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+}
+.header-user__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-size: 100% auto;
+  background-position: center center;
+}
+.header-user-namespace {
+  margin-left: 10px;
+}
+.header-user-namespace__name,
+.header-user-namespace__nickname {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.header-user-namespace__nickname {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.header-user-main {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #efefef;
+}
+.header-user-main-element {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.header-user-main-element__logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-size: auto 100%;
+}
+.header-user-main__hr {
+  margin: 12px 0;
+  opacity: 0.5;
+}
+.header-user-main__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100px;
+  min-height: 30px;
+  margin-top: 25px;
+  margin-left: auto;
+  font-size: 12px;
+}
+.header-main-buttons__element_user-active:checked + * + .header-user {
+  display: block;
+}
+.header-main-buttons[data-auth="false"] .header-user {
+  display: none;
 }
 .book {
   max-width: 900px;
