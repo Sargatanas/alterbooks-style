@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Appendix';
+    src: local('@');
+    src: url('/css/fonts/appendix/appendix-normal.ttf') format('ttf');
+    src: url('/css/fonts/appendix/appendix-normal.woff') format('woff');
+    src: url('/css/fonts/appendix/appendix-normal.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tiranti';
+    src: local('@');
+    src: url('/css/fonts/tiranti/tiranti.ttf') format('ttf');
+    src: url('/css/fonts/tiranti/tiranti.woff') format('woff');
+    src: url('/css/fonts/tiranti/tiranti.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header-project-name {
+    font-family: Tiranti, sans-serif;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+
+    &__special {
+        font-family: Appendix, serif;
+        font-size: 30px;
+        color: #9dd612;
+    }
+}

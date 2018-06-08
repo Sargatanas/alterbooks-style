@@ -1,6 +1,6 @@
 ﻿<div class="authentication" id="modal-0" data-status="modal-close">
     <div class="authentication__window">
-        <div class="authentication-enter" data-status="close">
+        <div class="authentication-enter" data-status="open">
             <div class="authentication-title">
                 авторизация
             </div>
@@ -100,7 +100,7 @@
         </div>
 
 
-        <div class="authentication-re-password" data-status="">
+        <div class="authentication-re-password" data-status="close">
             <div class="authentication-title">
                 забыли пароль?
             </div>

@@ -11,13 +11,11 @@
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="body">
+<body class="body" data-status="modal-close">
 
-<header class="header row row-center">
-    <div class="col-12 col-center col-middle">
-        He-e-e-e-e-ea-a-a-a-ader
-    </div>
-</header>
+<?php
+include "pages/common/header.php"
+?>
 
 <main class="container">
     <div class="row row-center">
@@ -43,5 +41,10 @@
     </div>
 </main>
 
+<?php
+include 'pages/authentication.php';
+?>
+
+<script src="/js/auth.js"></script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+.header-main-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__element {
+        display: flex;
+
+        margin-right: 15px;
+        padding: 10px 25px;
+
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+
+        font-size: 14px;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition-duration: 0.15s;
+        }
+
+        @media screen and (max-width: @md) {
+            margin-right: 5px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @sm) {
+    .button-registration {
+        display: none;
+    }
+}

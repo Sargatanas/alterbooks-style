@@ -4,21 +4,7 @@
   font-size: 18px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
-}
-.body[data-status="modal-open"] {
-  overflow: hidden;
-}
-.header {
-  align-items: center;
-  height: 50px;
-  margin-bottom: 30px;
-  background: white;
-  border: 1px solid #D3E0E9;
-}
-#header-button {
-  align-self: center;
-  min-height: 30px;
-  font-size: 14px;
+  overflow-y: scroll;
 }
 .button {
   display: flex;
@@ -398,6 +384,141 @@
 }
 .icon__conversation_grey {
   background: url("/css/img/icons/conversation_grey.svg");
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    margin-bottom: 0;
+  }
+}
+.header-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: #4b4b4b;
+}
+.header-main__area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 20px;
+}
+@media screen and (max-width: 767px) {
+  .header-main__area {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .header-main__area {
+    margin: 0 5px 0 10px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .header-main__area {
+    margin: 0 7px;
+  }
+}
+@font-face {
+  font-family: 'Appendix';
+  src: local('@');
+  src: url('/css/fonts/appendix/appendix-normal.ttf') format('ttf');
+  src: url('/css/fonts/appendix/appendix-normal.woff') format('woff');
+  src: url('/css/fonts/appendix/appendix-normal.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Tiranti';
+  src: local('@');
+  src: url('/css/fonts/tiranti/tiranti.ttf') format('ttf');
+  src: url('/css/fonts/tiranti/tiranti.woff') format('woff');
+  src: url('/css/fonts/tiranti/tiranti.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.header-project-name {
+  font-family: Tiranti, sans-serif;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+.header-project-name__special {
+  font-family: Appendix, serif;
+  font-size: 30px;
+  color: #9dd612;
+}
+.header-main-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-main-buttons__element {
+  display: flex;
+  margin-right: 15px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header-main-buttons__element:last-child {
+  margin-right: 0;
+}
+.header-main-buttons__element:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition-duration: 0.15s;
+}
+@media screen and (max-width: 767px) {
+  .header-main-buttons__element {
+    margin-right: 5px;
+  }
+  .header-main-buttons__element:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 479px) {
+  .button-registration {
+    display: none;
+  }
+}
+.header-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background: rgba(127, 126, 124, 0.2);
+}
+.header-navigation__element {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  color: black;
+}
+.header-navigation__element:first-child {
+  margin-left: 0;
+}
+.header-navigation__element:last-child {
+  margin-right: 0;
+}
+.header-navigation__element_disabled {
+  color: #979695;
+  user-select: none;
+}
+.header-navigation__hr {
+  width: 1px;
+  height: 26px;
+  background: #979695;
 }
 .book {
   max-width: 900px;
@@ -1747,6 +1868,13 @@
   font-size: 18px;
   color: red;
 }
+.registration__button {
+  max-width: 250px;
+  min-height: 40px;
+  margin-bottom: 35px;
+  border-radius: 2px;
+  font-size: 16px;
+}
 .registration-more {
   flex-direction: row;
   justify-content: center;
@@ -1777,12 +1905,8 @@
     margin-right: 0;
   }
 }
-.registration__button {
-  max-width: 250px;
-  min-height: 40px;
-  margin-bottom: 35px;
-  border-radius: 2px;
-  font-size: 16px;
+.registration-more__button {
+  margin-bottom: 0;
 }
 .re-password__button,
 .re-password__authentication {
