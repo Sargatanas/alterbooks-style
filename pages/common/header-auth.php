@@ -36,21 +36,20 @@
                         </div>
                     </div>
                     <div class="header-user-main">
-                        <div class="header-user-main-element">
-                            <div class="header-user-main-element__logo"
-                                 style="background-image: url('/css/img/icons/home_grey_empty.svg')"></div>
-                            <div class="header-user-main-element">
+                        <a class="header-user-main-element"
+                           href="/pages/user.php">
+                            <div class="header-user-main-element__logo header-user-main-element__logo_home"></div>
+                            <div class="header-user-main-element__text">
                                 мой профиль
                             </div>
-                        </div>
+                        </a>
                         <hr class="header-user-main__hr">
-                        <div class="header-user-main-element">
-                            <div class="header-user-main-element__logo"
-                                 style="background-image: url('/css/img/icons/book-reference_grey_empty.svg')"></div>
-                            <div class="header-user-main-element">
+                        <a class="header-user-main-element header-user-main-element_disabled" title="находится в разработке">
+                            <div class="header-user-main-element__logo header-user-main-element__logo_library"></div>
+                            <div class="header-user-main-element__text header-user-main-element__text">
                                 моя библиотека
                             </div>
-                        </div>
+                        </a>
                         <button class="header-user-main__button button">
                             выйти
                         </button>

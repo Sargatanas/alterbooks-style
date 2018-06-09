@@ -81,18 +81,73 @@
         &-element {
             display: flex;
             align-items: center;
-            margin-left: 10px;
+            padding: 5px 10px;
+            text-decoration: none;
+
+            &:hover {
+                background: rgba(36, 86, 0, 0.05);
+            }
+
+            &_disabled:hover {
+                background: transparent;
+            }
+
+            &__text {
+                color: @darkgrey;
+            }
+
+            &:hover &__text {
+                color: @darkergreen;
+                cursor: pointer;
+            }
+
+            &:hover &__logo {
+                &_home {
+                    background-image: url('/css/img/icons/home_green_empty.svg');
+                }
+
+                &_library {
+                    background-image: url('/css/img/icons/book-reference_green_empty.svg');
+                }
+            }
 
             &__logo {
                 width: 20px;
                 height: 20px;
-                margin-right: 5px;
+                margin-right: 10px;
                 background-size: auto 100%;
+
+                &_home {
+                    background-image: url('/css/img/icons/home_grey_empty.svg');
+                }
+
+                &_library {
+                    background-image: url('/css/img/icons/book-reference_grey_empty.svg');
+                }
             }
+
+
+            &_disabled &__text {
+                color: #b0afae;
+            }
+            &_disabled:hover &__text {
+                color: #b0afae;
+                cursor: auto;
+            }
+
+            &_disabled:hover &__logo {
+                &_home {
+                    background-image: url('/css/img/icons/home_grey_empty.svg');
+                }
+                &_library {
+                    background-image: url('/css/img/icons/book-reference_grey_empty.svg');
+                }
+            }
+
+
         }
 
         &__hr {
-            margin: 12px 0;
             opacity: 0.5;
         }
 

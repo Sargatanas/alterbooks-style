@@ -599,16 +599,54 @@
 .header-user-main-element {
   display: flex;
   align-items: center;
-  margin-left: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+.header-user-main-element:hover {
+  background: rgba(36, 86, 0, 0.05);
+}
+.header-user-main-element_disabled:hover {
+  background: transparent;
+}
+.header-user-main-element__text {
+  color: #6b6966;
+}
+.header-user-main-element:hover .header-user-main-element__text {
+  color: #00aa38;
+  cursor: pointer;
+}
+.header-user-main-element:hover .header-user-main-element__logo_home {
+  background-image: url('/css/img/icons/home_green_empty.svg');
+}
+.header-user-main-element:hover .header-user-main-element__logo_library {
+  background-image: url('/css/img/icons/book-reference_green_empty.svg');
 }
 .header-user-main-element__logo {
   width: 20px;
   height: 20px;
-  margin-right: 5px;
+  margin-right: 10px;
   background-size: auto 100%;
 }
+.header-user-main-element__logo_home {
+  background-image: url('/css/img/icons/home_grey_empty.svg');
+}
+.header-user-main-element__logo_library {
+  background-image: url('/css/img/icons/book-reference_grey_empty.svg');
+}
+.header-user-main-element_disabled .header-user-main-element__text {
+  color: #b0afae;
+}
+.header-user-main-element_disabled:hover .header-user-main-element__text {
+  color: #b0afae;
+  cursor: auto;
+}
+.header-user-main-element_disabled:hover .header-user-main-element__logo_home {
+  background-image: url('/css/img/icons/home_grey_empty.svg');
+}
+.header-user-main-element_disabled:hover .header-user-main-element__logo_library {
+  background-image: url('/css/img/icons/book-reference_grey_empty.svg');
+}
 .header-user-main__hr {
-  margin: 12px 0;
   opacity: 0.5;
 }
 .header-user-main__button {
