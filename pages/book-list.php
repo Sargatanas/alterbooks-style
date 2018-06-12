@@ -17,7 +17,7 @@
 include "common/header.php"
 ?>
 
-<main class="container">
+<main class="container body__main">
     <div class="row row-center">
         <div class="book-list-aside col-3 col-clear col-lg-0">
             <div class="book-list-genres" data-status="close">
@@ -90,6 +90,10 @@ include "common/header.php"
         </div>
     </div>
 </main>
+
+<?php
+include "common/footer.php";
+?>
 
 <?php
 include 'authentication.php';

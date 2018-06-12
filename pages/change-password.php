@@ -17,7 +17,7 @@
 include "common/header.php"
 ?>
 
-<main class="container">
+<main class="container body__main">
     <div class="row row-center">
         <div class="registration re-password col-8 col-clear col-md-10 col-md-clear" data-status="modal-close">
             <div class="row row-center">
@@ -74,6 +74,10 @@ include "common/header.php"
         </div>
     </div>
 </main>
+
+<?php
+include "common/footer.php";
+?>
 
 <?php
 include 'authentication.php';

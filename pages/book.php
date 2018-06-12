@@ -17,7 +17,7 @@
 include "common/header.php"
 ?>
 
-<main class="container">
+<main class="container body__main">
     <div class="row row-center">
         <div class="book col-12">
             <div class="row">
@@ -449,6 +449,10 @@ include "common/header.php"
 </main>
 
 <?php
+include "common/footer.php";
+?>
+
+<?php
 include 'authentication.php';
 ?>
 
@@ -475,13 +479,13 @@ include 'authentication.php';
 
                 text.setAttribute('data-status', 'open');
             } else {
-                text.style.maxHeight = '16em';
+                text.style.maxHeight = '16.5em';
                 text.style.marginBottom = '20px';
                 text.style.overflow = 'hidden';
 
                 block.style.display = 'block';
 
-                more.style.top = 'calc(15em - 4px)';
+                more.style.top = 'calc(15em - 2px)';
                 more.style.bottom = 'auto';
                 more.innerHTML = 'читать далее';
 

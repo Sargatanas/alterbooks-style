@@ -17,7 +17,7 @@
 include "pages/common/header-auth.php"
 ?>
 
-<main class="container">
+<main class="container body__main">
     <div class="row row-center">
         <div class="col-6 col-md-8 col-sm-12">
             <div class="row">
@@ -40,6 +40,10 @@ include "pages/common/header-auth.php"
         </div>
     </div>
 </main>
+
+<?php
+include "pages/common/footer.php";
+?>
 
 <?php
 include 'pages/authentication.php';
