@@ -1,4 +1,4 @@
-<footer class="footer">
+﻿<footer class="footer">
     <div class="footer__area">
         <div class="footer-info footer-block">
             <div class="footer-block__title">
@@ -35,7 +35,7 @@
             <div class="footer-warning">
                 <div class="footer-warning__icon">18+</div>
                 <div class="footer-warning__text">
-                    Внимание! Сайт может содержать материалы, не&nbsp;предназначенные
+                    Внимание! Сайт может содержать информацию, не&nbsp;предназначенную
                     для&nbsp;просмотра лицами, не&nbsp;достигшими 18&nbsp;лет!
                 </div>
             </div>
@@ -51,7 +51,7 @@
             <div class="footer-warning">
                 <div class="footer-warning__icon">18+</div>
                 <div class="footer-warning__text">
-                    Внимание! Сайт может содержать материалы, не&nbsp;предназначенные
+                    Внимание! Сайт может содержать информацию, не&nbsp;предназначенную
                     для&nbsp;просмотра лицами, не&nbsp;достигшими 18&nbsp;лет!
                 </div>
             </div>

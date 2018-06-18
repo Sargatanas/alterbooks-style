@@ -28,6 +28,7 @@
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+  user-select: none;
 }
 .button:hover {
   background: #f9f9f9;
@@ -1182,6 +1183,246 @@
 .review-grade__button:hover {
   border-color: #c9c8c8;
   cursor: pointer;
+}
+.review-new {
+  width: 100%;
+  min-height: 100px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 2px dashed #e2e2e2;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.review-new-create__text {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #979695;
+  text-align: center;
+  line-height: 1.5em;
+}
+.review-new-create__button {
+  max-width: 260px;
+  min-height: 40px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+@media screen and (max-width: 400px) {
+  .review-new-create__button {
+    min-height: 35px;
+    font-size: 14px;
+  }
+}
+.review-new-create[data-status="open"] {
+  display: block;
+}
+.review-new-create[data-status="close"] {
+  display: none;
+}
+.review-new-form[data-status="close"] {
+  display: none;
+}
+.review-new-form__field {
+  position: relative;
+  font-size: 16px;
+}
+.review-new-form__field * {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+.review-new-form__field input[type="text"],
+.review-new-form__field textarea {
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 2px solid #efefef;
+  background: #efefef;
+}
+.review-new-form__field textarea {
+  min-height: 10em;
+  resize: vertical;
+}
+.review-new-form__field input[type="text"]:focus,
+.review-new-form__field textarea:focus {
+  outline: none;
+  border-color: #e2e2e2;
+}
+.review-new-form__message,
+.review-new-form__error {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.review-new-form__message {
+  color: #979695;
+  margin-bottom: 15px;
+}
+.review-new-form__error {
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  color: red;
+}
+.review-new-form__message + .review-new-form__error {
+  bottom: 0;
+}
+.review-new-form *[data-has-error="false"] ~ .review-new-form__error {
+  display: none;
+}
+.review-new-form *[data-has-error="true"] ~ .review-new-form__message {
+  visibility: hidden;
+}
+.review-new-form__button {
+  max-width: 260px;
+  min-height: 40px;
+  margin: 30px auto 0;
+  font-size: 16px;
+}
+@media screen and (max-width: 400px) {
+  .review-new-form__button {
+    min-height: 35px;
+    font-size: 14px;
+  }
+}
+.review-new-form-rating {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.review-new-form-rating__text {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.review-new-form-rating__number {
+  order: -100;
+  margin-left: 5px;
+  color: #979695;
+}
+.review-new-stars__element[value="10"]:checked ~ .review-new-form-rating__number:after,
+.review-new-stars__element[value="10"] + .review-new-stars__star:hover ~ .review-new-form-rating__number:after {
+  content: "(10)";
+}
+.review-new-stars__element[value="9"]:checked ~ .review-new-form-rating__number:after,
+.review-new-stars__element[value="9"] + .review-new-stars__star:hover ~ .review-new-form-rating__number:after {
+  content: "(9)";
+}
+.review-new-stars__element[value="8"]:checked ~ .review-new-form-rating__number:after,
+.review-new-stars__element[value="8"] + .review-new-stars__star:hover ~ .review-new-form-rating__number:after {
+  content: "(8)";
+}
+.review-new-stars__element[value="7"]:checked ~ .review-new-form-rating__number:after,
+.review-new-stars__element[value="7"] + .review-new-stars__star:hover ~ .review-new-form-rating__number:after {
+  content: "(7)";
+}
+.review-new-stars__element[value="6"]:checked ~ .review-new-form-rating__number:after,
+.review-new-stars__element[value="6"] + .review-new-stars__star:hover ~ .review-new-form-rating__number:after {
+  content: "(6)";
+}
+.review-new-stars__element[value="5"]:checked ~ .review-new-form-rating__number:after,
+.review-new-stars__element[value="5"] + .review-new-stars__star:hover ~ .review-new-form-rating__number:after {
+  content: "(5)";
+}
+.review-new-stars__element[value="4"]:checked ~ .review-new-form-rating__number:after,
+.review-new-stars__element[value="4"] + .review-new-stars__star:hover ~ .review-new-form-rating__number:after {
+  content: "(4)";
+}
+.review-new-stars__element[value="3"]:checked ~ .review-new-form-rating__number:after,
+.review-new-stars__element[value="3"] + .review-new-stars__star:hover ~ .review-new-form-rating__number:after {
+  content: "(3)";
+}
+.review-new-stars__element[value="2"]:checked ~ .review-new-form-rating__number:after,
+.review-new-stars__element[value="2"] + .review-new-stars__star:hover ~ .review-new-form-rating__number:after {
+  content: "(2)";
+}
+.review-new-stars__element[value="1"]:checked ~ .review-new-form-rating__number:after,
+.review-new-stars__element[value="1"] + .review-new-stars__star:hover ~ .review-new-form-rating__number:after {
+  content: "(1)";
+}
+@media screen and (max-width: 400px) {
+  .review-new-form-rating__number {
+    display: none;
+  }
+}
+.review-new-stars {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.review-new-stars__element {
+  display: none;
+}
+.review-new-stars__star:hover {
+  cursor: pointer;
+}
+.review-new-stars__star .review-rating__star {
+  margin-right: 2px;
+  fill: #e2e2e2;
+  transition: 0.2s fill;
+}
+.review-new-stars__element[value="10"]:checked ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="9"]:checked ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="8"]:checked ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="7"]:checked ~ .review-new-stars__star .review-rating__star {
+  fill: #a0c88f;
+}
+.review-new-stars__element[value="6"]:checked ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="5"]:checked ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="4"]:checked ~ .review-new-stars__star .review-rating__star {
+  fill: #f3d8ab;
+}
+.review-new-stars__element[value="3"]:checked ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="2"]:checked ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="1"]:checked ~ .review-new-stars__star .review-rating__star {
+  fill: #eb9e8d;
+}
+.review-new-stars__element[value="10"]:checked .review-rating__star,
+.review-new-stars__element[value="9"]:checked .review-rating__star,
+.review-new-stars__element[value="8"]:checked .review-rating__star,
+.review-new-stars__element[value="7"]:checked .review-rating__star {
+  fill: #a0c88f;
+}
+.review-new-stars__element[value="6"]:checked .review-rating__star,
+.review-new-stars__element[value="5"]:checked .review-rating__star,
+.review-new-stars__element[value="7"]:checked .review-rating__star {
+  fill: #f3d8ab;
+}
+.review-new-stars__element[value="3"]:checked .review-rating__star,
+.review-new-stars__element[value="2"]:checked .review-rating__star,
+.review-new-stars__element[value="4"]:checked .review-rating__star {
+  fill: #eb9e8d;
+}
+.review-new-stars__element[value="10"] + .review-new-stars__star:hover ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="9"] + .review-new-stars__star:hover ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="8"] + .review-new-stars__star:hover ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="7"] + .review-new-stars__star:hover ~ .review-new-stars__star .review-rating__star {
+  fill: #1cba00;
+}
+.review-new-stars__element[value="6"] + .review-new-stars__star:hover ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="5"] + .review-new-stars__star:hover ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="4"] + .review-new-stars__star:hover ~ .review-new-stars__star .review-rating__star {
+  fill: #f3b134;
+}
+.review-new-stars__element[value="3"] + .review-new-stars__star:hover ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="2"] + .review-new-stars__star:hover ~ .review-new-stars__star .review-rating__star,
+.review-new-stars__element[value="1"] + .review-new-stars__star:hover ~ .review-new-stars__star .review-rating__star {
+  fill: #eb502a;
+}
+.review-new-stars__element[value="10"] + .review-new-stars__star:hover .review-rating__star,
+.review-new-stars__element[value="9"] + .review-new-stars__star:hover .review-rating__star,
+.review-new-stars__element[value="8"] + .review-new-stars__star:hover .review-rating__star,
+.review-new-stars__element[value="7"] + .review-new-stars__star:hover .review-rating__star {
+  fill: #1cba00;
+}
+.review-new-stars__element[value="6"] + .review-new-stars__star:hover .review-rating__star,
+.review-new-stars__element[value="5"] + .review-new-stars__star:hover .review-rating__star,
+.review-new-stars__element[value="4"] + .review-new-stars__star:hover .review-rating__star {
+  fill: #f3b134;
+}
+.review-new-stars__element[value="3"] + .review-new-stars__star:hover .review-rating__star,
+.review-new-stars__element[value="2"] + .review-new-stars__star:hover .review-rating__star,
+.review-new-stars__element[value="1"] + .review-new-stars__star:hover .review-rating__star {
+  fill: #eb502a;
 }
 .user {
   max-width: 900px;

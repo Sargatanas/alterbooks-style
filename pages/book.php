@@ -165,6 +165,9 @@ include "common/header.php"
                         <hr class="block-content-header__hr">
                     </div>
                     <div class="block-content-main">
+                        <?php
+                        include "review-list/new-review.php";
+                        ?>
                         <div class="review-element">
                             <div class="review-rating" data-rating = "5">
                                 <div class="review-rating__header">
@@ -457,6 +460,7 @@ include 'authentication.php';
 ?>
 
 <script src="/js/auth.js"></script>
+<script src="/js/review-new.js"></script>
 
 <script>
     let read_more = document.getElementsByClassName('review-text__more');
