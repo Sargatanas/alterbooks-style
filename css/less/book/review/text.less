@@ -1,7 +1,7 @@
 .review-text {
+    max-width: ~'calc(100% - 20px)';
     margin-left: 10px;
     margin-bottom: 20px;
-
     line-height: 1.5;
 
     @media screen and (max-width: @md) {
@@ -15,7 +15,6 @@
     // обрезка текста под cut
     overflow-y: hidden;
     position: relative;
-    width: 200px;
     max-height: 16.5em;
 
     &__block {
@@ -49,4 +48,13 @@
 
         cursor: pointer;
     }
+
+    .review-element[data-auth="true"][data-status="delete"] & {
+        max-height: 6em;
+
+        &__block {
+            top: ~"calc(4.5em - 2px)";
+        }
+    }
 }
+

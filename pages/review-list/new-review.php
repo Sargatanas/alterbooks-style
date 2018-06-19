@@ -1,4 +1,4 @@
-<div class="review-new">
+<div class="review-new" data-status="open" id="review-new">
     <div class="review-new-create"
          data-status="open">
         <div class="review-new-create__text">
