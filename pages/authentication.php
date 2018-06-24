@@ -39,13 +39,13 @@
                             <label for="checkbox-1" class="col-xs-12 checkbox">
                                 <input type="checkbox" class="checkbox__field" id="checkbox-1" name="checkbox-1">
                                 <span class="checkbox-animation">
-                                <span class="checkbox-animation__button"></span>
-                                <span class="checkbox-animation__icon"></span>
-                                <span class="checkbox-animation__ripple"></span>
-                            </span>
+                                    <span class="checkbox-animation__button"></span>
+                                    <span class="checkbox-animation__icon"></span>
+                                    <span class="checkbox-animation__ripple"></span>
+                                </span>
                                 <span class="checkbox__content">
-                                запомнить меня
-                            </span>
+                                    запомнить меня
+                                </span>
                             </label>
                         </div>
                         <a class="authentication__forget">

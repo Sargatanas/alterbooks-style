@@ -95,6 +95,30 @@ include "common/header.php"
                            placeholder="псевдоним">
                 </div>
 
+                <div class="registration-element registration-element_agreement col-12 col-clear">
+                    <div class="authentication__checkbox">
+                        <label for="checkbox-1" class="col-xs-12 checkbox">
+                            <input type="checkbox" class="checkbox__field" id="checkbox-1" name="checkbox-1">
+                            <span class="checkbox-animation">
+                                    <span class="checkbox-animation__button"></span>
+                                    <span class="checkbox-animation__icon"></span>
+                                    <span class="checkbox-animation__ripple"></span>
+                            </span>
+                            <span class="checkbox__content">
+                                я согласен с
+                                <a class="registration-agreement__href">
+                                    пользовательским соглашением
+                                </a>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-12 col-clear col-center">
+                    <button class="registration__button registration__button_disabled button button_green" id="registration-button">
+                        регистрация
+                    </button>
+                </div>
 
                 <div class="block-content col-12 col-clear">
                     <div class="registration__hr block-content-header block-content-header_center">
@@ -114,12 +138,6 @@ include "common/header.php"
                         <div class="registration-more__element"
                              style="background-image: url('/css/img/social/google.svg')"></div>
                     </div>
-                </div>
-
-                <div class="col-12 col-clear col-center">
-                    <button class="registration__button button button_green">
-                        регистрация
-                    </button>
                 </div>
 
                 <div class="block-content col-12 col-clear">
@@ -150,5 +168,14 @@ include 'authentication.php';
 ?>
 
 <script src="/js/auth.js"></script>
+
+<script>
+    let checkbox = document.getElementById('checkbox-1');
+    let button = document.getElementById('registration-button');
+
+    checkbox.addEventListener('click', function (c) {
+        button.classList.toggle('registration__button_disabled');
+    });
+</script>
 </body>
 </html>
