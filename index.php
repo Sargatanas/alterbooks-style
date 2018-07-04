@@ -27,6 +27,9 @@ include "pages/common/header-auth.php"
                 <a class="user-book__button button col-12" href="/pages/user.php">
                     <span>профиль пользователя</span>
                 </a>
+                <a class="user-book__button button col-12" href="/pages/edit-user.php">
+                    <span>редактирование профиля пользователя</span>
+                </a>
                 <a class="user-book__button button col-12" href="/pages/book-list.php">
                     <span>список книг</span>
                 </a>

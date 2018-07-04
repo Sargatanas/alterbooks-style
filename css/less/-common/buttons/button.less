@@ -28,7 +28,6 @@
         background: rgb(244, 244, 244);
     }
 
-
     // Цветовые модификации
 
     &_green {
@@ -86,7 +85,8 @@
 
     // Дефолтные значения
 
-    &_default {
+    &_default,
+    &:disabled {
         color: @grey;
         border: 1px solid @lightgrey;
         cursor: auto;

@@ -68,7 +68,7 @@
         <div class="header-navigation__hr"></div>
         <a class="header-navigation__element"
            href="/pages/book-list.php">
-            Список книг
+            Список&nbsp;книг
         </a>
         <div class="header-navigation__hr"></div>
         <a class="header-navigation__element header-navigation__element_disabled">

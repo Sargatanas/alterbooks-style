@@ -1,8 +1,13 @@
 .header-project-name {
     display: block;
-    width: 196px;
-    height: 44px;
+    width: 180px;
+    height: 40px;
     margin-right: 10px;
     background: url("/css/img/logo.png") no-repeat center center;
     background-size: 100% auto;
+
+    @media screen and (max-width: @md) {
+        width: 130px;
+        height: 29px;
+    }
 }
