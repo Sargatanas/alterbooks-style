@@ -3194,7 +3194,9 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 7px 8px 7px 15px;
+  width: 74px;
+  box-sizing: border-box;
+  padding: 7px 10px 7px 10px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   border: 1px solid #c9c8c8;
@@ -3202,6 +3204,7 @@
   background: #f3f3f3;
   font-size: 14px;
   color: #979695;
+  text-align: center;
   user-select: none;
 }
 .edit-block-element__flag {
