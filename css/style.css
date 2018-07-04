@@ -3192,14 +3192,13 @@
 }
 .edit-block-element__size {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 1px;
+  right: 1px;
   width: 74px;
   box-sizing: border-box;
-  padding: 7px 10px 7px 10px;
+  padding: 7px 10px 6px 10px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
-  border: 1px solid #c9c8c8;
   border-left: none;
   background: #f3f3f3;
   font-size: 14px;

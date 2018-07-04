@@ -218,7 +218,7 @@ include 'review-list/self-review.php';
                     <div class="edit-block-element">
                         <label class="edit-block-element__title"
                                for="change_password">
-                            Пароль
+                            Новый пароль
                         </label>
                         <div class="edit-block-element__content">
                             <input class="edit-block-element__content_password"
@@ -290,15 +290,10 @@ include 'authentication.php';
         button_re_password = button_re_password.nextSibling;
     }
 
-    if ((password[0].value !== '') && (password[0].value === re_password[0].value)) {
-        re_password[0].setAttribute('data-status', 'correct');
-        button_re_password.disabled = false;
-    } else {
-        re_password[0].setAttribute('data-status', 'error');
-        button_re_password.disabled = true;
-    }
     re_password[0].oninput = function () {
-        if ((password[0].value !== '') && (password[0].value === re_password[0].value)) {
+        if ((password[0].value === '') && (password[0].value === re_password[0].value)) {
+            button_re_password.disabled = false;
+        } else if ((password[0].value !== '') && (password[0].value === re_password[0].value)) {
             re_password[0].setAttribute('data-status', 'correct');
             button_re_password.disabled = false;
         } else {
@@ -307,7 +302,9 @@ include 'authentication.php';
         }
     };
     password[0].oninput = function () {
-        if ((password[0].value !== '') && (password[0].value === re_password[0].value)) {
+        if ((password[0].value === '') && (password[0].value === re_password[0].value)) {
+            button_re_password.disabled = false;
+        } else if ((password[0].value !== '') && (password[0].value === re_password[0].value)) {
             re_password[0].setAttribute('data-status', 'correct');
             button_re_password.disabled = false;
         } else {
