@@ -292,8 +292,10 @@ include 'authentication.php';
 
     if ((password[0].value !== '') && (password[0].value === re_password[0].value)) {
         re_password[0].setAttribute('data-status', 'correct');
+        button_re_password.disabled = false;
     } else {
         re_password[0].setAttribute('data-status', 'error');
+        button_re_password.disabled = true;
     }
     re_password[0].oninput = function () {
         if ((password[0].value !== '') && (password[0].value === re_password[0].value)) {
