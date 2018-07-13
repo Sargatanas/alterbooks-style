@@ -7,6 +7,13 @@
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Cropper -->
+    <link rel="stylesheet" href="/pages/edit/cropper/docs/css/cropper.css">
+    <link rel="stylesheet" href="/pages/edit/cropper/docs/css/main.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -30,13 +37,8 @@ include 'review-list/self-review.php';
                     </div>
                     <hr class="edit-block-header__hr">
                 </div>
-                <div class="edit-block__main">
-                    <div class="edit-block-load">
-                        <button class="edit-block-element__button button">
-                            загрузить аватар
-                        </button>
-                    </div>
-
+                <form class="edit-block__main"
+                      onsubmit="return false">
                     <div class="edit-block-element">
                         <label class="edit-block-element__title"
                                for="change_nickname">
@@ -174,12 +176,18 @@ include 'review-list/self-review.php';
                         </div>
                     </div>
 
-                    <div class="edit-block-element">
-                        <label class="edit-block-element__title"
-                               for="date">
-                            О себе
-                        </label>
-                        <div class="edit-block-element__content">
+                    <?php include "edit/cropper/docs/cropper.php" ?>
+
+                    <div class="edit-block-element edit-block-element_wide">
+                        <div class="edit-block-header">
+                            <hr class="edit-block-header__hr">
+                            <label class="edit-block-header__title"
+                                   for="date">
+                                о&nbsp;себе
+                            </label>
+                            <hr class="edit-block-header__hr">
+                        </div>
+                        <div class="edit-block-element__content edit-block-element__content_wide">
                             <textarea class="edit-block-element__content_date"
                                    type="date"
                                    id="date"
@@ -188,11 +196,13 @@ include 'review-list/self-review.php';
                         </div>
                     </div>
 
-                    <button class="edit-block-element__button button">
-                        сохранить
-                    </button>
-                </div>
+                    <input  class="edit-block-element__button button"
+                            type="submit"
+                            value="сохранить">
+                </form>
             </div>
+
+
 
             <div class="edit-block">
                 <div class="edit-block-header">
@@ -202,7 +212,8 @@ include 'review-list/self-review.php';
                     </div>
                     <hr class="edit-block-header__hr">
                 </div>
-                <div class="edit-block__main">
+                <form class="edit-block__main"
+                      onsubmit="return false">
                     <div class="edit-block-element">
                         <label class="edit-block-element__title"
                                for="change_e-mail">
@@ -250,10 +261,10 @@ include 'review-list/self-review.php';
                         </div>
                     </div>
 
-                    <button class="edit-block-element__button button">
-                        изменить
-                    </button>
-                </div>
+                    <input  class="edit-block-element__button button"
+                            type="submit"
+                            value="изменить">
+                </form>
             </div>
         </div>
     </div>
@@ -268,6 +279,13 @@ include 'authentication.php';
 ?>
 
 <script src="/js/auth.js"></script>
+
+<!-- Cropper -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://fengyuanchen.github.io/js/common.js"></script>
+<script src="/pages/edit/cropper/docs/js/cropper.js"></script>
+<script src="/pages/edit/cropper/docs/js/main.js"></script>
 
 <script>
     let input = document.getElementsByClassName('edit-block-element__content_input');
@@ -312,6 +330,21 @@ include 'authentication.php';
             button_re_password.disabled = true;
         }
     };
+
+
+    // Cropper
+    let cropper_button_change = document.getElementById('cropper-change');
+    let cropper_change = cropper_button_change.previousSibling.previousSibling;
+
+    cropper_button_change.addEventListener('click', function () {
+        if (cropper_change.getAttribute('data-status') === 'open') {
+            cropper_change.setAttribute('data-status', 'close');
+            cropper_button_change.innerHTML = 'изменить';
+        } else {
+            cropper_change.setAttribute('data-status', 'open');
+            cropper_button_change.innerHTML = 'сохранить';
+        }
+    });
 </script>
 
 </body>
