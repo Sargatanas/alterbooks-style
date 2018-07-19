@@ -3347,8 +3347,39 @@
   padding: 15px;
   border-radius: 5px;
   border: 2px dashed #c9c8c8;
-  cursor: pointer;
+}
+.edit-cropper-load__text {
+  margin-top: 10px;
+  font-size: 16px;
+  user-select: none;
+}
+.edit-cropper-load__text_drop {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .edit-cropper-load__text {
+    display: none;
+  }
 }
 .edit-cropper-load__field {
   display: none;
+}
+.edit-cropper-load__button {
+  cursor: pointer;
+}
+.highlight {
+  justify-content: center;
+  min-height: 105px;
+  border-color: #1cba00;
+  background: rgba(0, 0, 0, 0.03);
+}
+.highlight .edit-cropper-preview__button,
+.highlight .edit-cropper-load__text {
+  display: none;
+}
+.highlight .edit-cropper-preview__button_drop,
+.highlight .edit-cropper-load__text_drop {
+  position: relative;
+  z-index: -100;
+  display: block;
 }

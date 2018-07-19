@@ -66,8 +66,20 @@
 
             border-radius: 5px;
             border: 2px dashed @grey;
+        }
 
-            cursor: pointer;
+        &__text {
+            margin-top: 10px;
+            font-size: 16px;
+            user-select: none;
+
+            &_drop {
+                display: none;
+            }
+
+            @media screen and (max-width: @md) {
+                display: none;
+            }
         }
 
         &__field {
@@ -75,7 +87,25 @@
         }
 
         &__button {
+            cursor: pointer;
+        }
+    }
+}
 
+.highlight {
+    justify-content: center;
+    min-height: 105px;
+    border-color: @green;
+    background: rgba(0, 0, 0, 0.03);
+
+    & .edit-cropper-preview__button,
+    & .edit-cropper-load__text {
+        display: none;
+
+        &_drop {
+            position: relative;
+            z-index: -100;
+            display: block;
         }
     }
 }

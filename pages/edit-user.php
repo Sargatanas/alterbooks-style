@@ -38,7 +38,9 @@ include 'review-list/self-review.php';
                     <hr class="edit-block-header__hr">
                 </div>
                 <form class="edit-block__main"
-                      onsubmit="return false">
+                      onsubmit="return false"
+                      enctype="multipart/form-data">
+
                     <div class="edit-block-element">
                         <label class="edit-block-element__title"
                                for="change_nickname">
@@ -288,6 +290,7 @@ include 'authentication.php';
 <script src="/pages/edit/cropper/docs/js/main.js"></script>
 
 <script>
+
     let input = document.getElementsByClassName('edit-block-element__content_input');
     Array.prototype.forEach.call(input, function(field){
         let size = field.parentNode.nextSibling.nextSibling;
@@ -342,7 +345,7 @@ include 'authentication.php';
             cropper_button_change.innerHTML = 'изменить';
         } else {
             cropper_change.setAttribute('data-status', 'open');
-            cropper_button_change.innerHTML = 'сохранить';
+            cropper_button_change.innerHTML = 'готово';
         }
     });
 </script>

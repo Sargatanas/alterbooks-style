@@ -22,6 +22,7 @@
             <div class="col-12 col-clear">
                 <div class="img-container">
                     <img src="/css/img/cropper/picture.jpg"
+                         id="cropperImage"
                          alt="Picture">
                 </div>
             </div>
@@ -29,18 +30,9 @@
 
         <div class="row" id="actions">
             <div class="edit-cropper-load col-12 col-clear docs-buttons">
-                <label class="edit-cropper-load__area"
-                       for="inputImage"
-                       title="выбрать файл">
-                    <input class="edit-cropper-load__field"
-                            type="file"
-                           id="inputImage"
-                           name="file"
-                           accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
-                    <span class="edit-cropper-preview__button edit-block-element__button button">
-                        Выбрать файл
-                    </span>
-                </label>
+                <?php
+                @include 'cropper-upload.php';
+                ?>
 
                 <button  class="button"
                          style="display: none"
@@ -52,49 +44,69 @@
 
                 <div class="docs-data" style="display: none">
                     <div class="input-group input-group-sm">
-            <span class="input-group-prepend">
-              <label class="input-group-text" for="dataX">X</label>
-            </span>
+                        <span class="input-group-prepend">
+                            <label class="input-group-text" for="dataX">
+                                X
+                            </label>
+                        </span>
                         <input type="text" class="form-control" id="dataX" placeholder="x">
                         <span class="input-group-append">
-              <span class="input-group-text">px</span>
-            </span>
+                            <span class="input-group-text">
+                                px
+                            </span>
+                        </span>
                     </div>
                     <div class="input-group input-group-sm">
-            <span class="input-group-prepend">
-              <label class="input-group-text" for="dataY">Y</label>
-            </span>
+                        <span class="input-group-prepend">
+                            <label class="input-group-text" for="dataY">
+                                Y
+                            </label>
+                        </span>
                         <input type="text" class="form-control" id="dataY" placeholder="y">
                         <span class="input-group-append">
-              <span class="input-group-text">px</span>
-            </span>
+                            <span class="input-group-text">
+                                px
+                            </span>
+                        </span>
                     </div>
                     <div class="input-group input-group-sm">
-            <span class="input-group-prepend">
-              <label class="input-group-text" for="dataWidth">Width</label>
-            </span>
+                        <span class="input-group-prepend">
+                            <label class="input-group-text" for="dataWidth">
+                                Width
+                            </label>
+                        </span>
                         <input type="text" class="form-control" id="dataWidth" placeholder="width">
                         <span class="input-group-append">
-              <span class="input-group-text">px</span>
-            </span>
+                            <span class="input-group-text">
+                                px
+                            </span>
+                        </span>
                     </div>
                     <div class="input-group input-group-sm">
-            <span class="input-group-prepend">
-              <label class="input-group-text" for="dataHeight">Height</label>
-            </span>
+                        <span class="input-group-prepend">
+                            <label class="input-group-text" for="dataHeight">
+                                Height
+                            </label>
+                        </span>
                         <input type="text" class="form-control" id="dataHeight" placeholder="height">
                         <span class="input-group-append">
-              <span class="input-group-text">px</span>
-            </span>
+                            <span class="input-group-text">
+                                px
+                            </span>
+                        </span>
                     </div>
                     <div class="input-group input-group-sm">
-            <span class="input-group-prepend">
-              <label class="input-group-text" for="dataRotate">Rotate</label>
-            </span>
+                        <span class="input-group-prepend">
+                            <label class="input-group-text" for="dataRotate">
+                                Rotate
+                            </label>
+                        </span>
                         <input type="text" class="form-control" id="dataRotate" placeholder="rotate">
                         <span class="input-group-append">
-              <span class="input-group-text">deg</span>
-            </span>
+                            <span class="input-group-text">
+                                deg
+                            </span>
+                        </span>
                     </div>
                     <div class="input-group input-group-sm">
                         <span class="input-group-prepend">
