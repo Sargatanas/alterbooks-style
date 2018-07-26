@@ -22,8 +22,6 @@
 
 <?php
 include "common/header.php";
-include 'review-list/review.php';
-include 'review-list/self-review.php';
 ?>
 
 <main class="container body__main">
@@ -178,7 +176,7 @@ include 'review-list/self-review.php';
                         </div>
                     </div>
 
-                    <?php include "edit/cropper/docs/cropper.php" ?>
+                    <?php include "edit/cropper/docs/cropper-avatar.php" ?>
 
                     <div class="edit-block-element edit-block-element_wide">
                         <div class="edit-block-header">
@@ -198,7 +196,7 @@ include 'review-list/self-review.php';
                         </div>
                     </div>
 
-                    <input  class="edit-block-element__button button"
+                    <input  class="edit-block-element__button button button_green"
                             type="submit"
                             value="сохранить">
                 </form>
@@ -263,7 +261,7 @@ include 'review-list/self-review.php';
                         </div>
                     </div>
 
-                    <input  class="edit-block-element__button button"
+                    <input  class="edit-block-element__button button button_green"
                             type="submit"
                             value="изменить">
                 </form>
@@ -348,6 +346,9 @@ include 'authentication.php';
             cropper_button_change.innerHTML = 'готово';
         }
     });
+
+    window.onload = cropperMain(23 / 27);
+
 </script>
 
 </body>

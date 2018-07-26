@@ -1,4 +1,4 @@
-function cropperMain() {
+function cropperMain(aspect_ratio) {
 
     'use strict';
 
@@ -16,7 +16,7 @@ function cropperMain() {
     let dataScaleX = document.getElementById('dataScaleX');
     let dataScaleY = document.getElementById('dataScaleY');
     let options = {
-        aspectRatio: 23 / 27,
+        aspectRatio: aspect_ratio,
         preview: '.img-preview',
         ready: function (e) {
         },
@@ -366,5 +366,3 @@ function cropperMain() {
         inputImage.parentNode.className += ' disabled';
     }
 }
-
-window.onload = cropperMain();

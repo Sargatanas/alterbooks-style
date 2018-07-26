@@ -28,9 +28,6 @@
             box-sizing: border-box;
 
             padding: 15px 15px 10px;
-
-            border-radius: 5px;
-            border: 2px dashed @grey;
         }
 
         &__image {
@@ -47,6 +44,10 @@
             width: 150px;
             height: 30px;
             font-size: 14px;
+
+            @media screen and (max-width: 350px) {
+                font-size: 12px;
+            }
         }
     }
 
@@ -66,6 +67,12 @@
 
             border-radius: 5px;
             border: 2px dashed @grey;
+
+            @media screen and (max-width: @md) {
+                margin-top: 15px;
+                padding: 0;
+                border: none;
+            }
         }
 
         &__text {

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container edit-block edit-block_file">
     <div class="edit-block-header">
         <hr class="edit-block-header__hr">
         <div class="edit-block-header__title">

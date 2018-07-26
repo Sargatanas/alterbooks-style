@@ -1,8 +1,18 @@
 .edit-block {
     width: 100%;
+    margin-top: 30px;
 
-    &:not(:first-child) {
-        margin-top: 30px;
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &_file {
+        margin-top: 0;
+        padding-top: 0;
+
+        @media screen and (max-width: @sm) {
+            margin-bottom: 15px;
+        }
     }
 
     @media screen and (max-width: @sm) {
@@ -16,6 +26,10 @@
         justify-content: center;
         width: 100%;
         margin-bottom: 15px;
+
+        @media screen and (max-width: @sm) {
+            margin-bottom: 0;
+        }
 
         &__title {
             margin: 0 15px;
@@ -33,6 +47,10 @@
                 font-size: 14px;
                 text-align: center;
             }
+
+            @media screen and (max-width: 330px) {
+                font-size: 12px;
+            }
         }
 
         &__hr {
@@ -49,6 +67,10 @@
         box-sizing: border-box;
         padding: 30px 20px;
         background: rgba(255, 255, 255, 0.7);
+
+        @media screen and (max-width: @sm) {
+            padding-top: 20px;
+        }
     }
 
     &-load {
@@ -123,13 +145,27 @@
             text-align: right;
 
             @media screen and (max-width: @md) {
-                margin-bottom: 10px;
+                margin: 5px 0;
                 text-align: left;
             }
         }
 
         &__content {
             width: ~"calc(100% - 170px)";
+
+            &_select {
+                height: 32px;
+                margin-top: 2px;
+                padding-left: 10px;
+                border: 1px solid #c8c8c8;
+                border-radius: 2px;
+                font-size: 14px;
+
+                &:active,
+                &:focus {
+                    outline: none;
+                }
+            }
 
             &_wide {
                 width: 100%;
@@ -139,7 +175,7 @@
                 width: 100%;
             }
 
-            & > *:not(&_radio):first-child {
+            & > *:not(&_radio):not(&_checkbox):not(option):first-child {
                 width: 100%;
                 max-width: 100%;
                 min-width: 100%;
@@ -184,11 +220,21 @@
 
             & &_radio {
                 display: flex;
-                margin-top: 5px;
+                margin-top: 10px;
 
                 @media screen and (max-width: @sm) {
                     flex-direction: column;
                     margin-bottom: 15px;
+                }
+            }
+
+            & &_checkbox {
+                display: flex;
+                flex-direction: column;
+                margin-top: 7px;
+
+                & label {
+                    margin-bottom: 10px;
                 }
             }
 
@@ -218,6 +264,10 @@
             text-align: center;
 
             user-select: none;
+
+            @media screen and (max-width: 370px) {
+                display: none;
+            }
         }
     }
 }

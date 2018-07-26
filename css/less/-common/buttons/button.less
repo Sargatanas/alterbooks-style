@@ -6,6 +6,7 @@
     min-width: 50px;
     width: 100%;
     min-height: 45px;
+    box-sizing: border-box;
 
     background: white;
 
@@ -34,6 +35,19 @@
         background: white;
     }
 
+    // Дефолтные значения
+
+    &_default,
+    &:disabled {
+        color: @grey;
+        border: 1px solid @lightgrey;
+        cursor: auto;
+
+        &:hover {
+            background: white;
+        }
+    }
+
 
     // Цветовые модификации
 
@@ -47,6 +61,14 @@
         }
         &:active {
             background: @darkgreen;
+        }
+        &:disabled,
+        &:disabled:hover,
+        &:disabled:focus,
+        &:disabled:active {
+            border: none;
+            background: #9fba90;
+            color: white;
         }
     }
 
@@ -87,19 +109,6 @@
             border-color: @green;
             color: black;
             cursor: pointer;
-        }
-    }
-
-    // Дефолтные значения
-
-    &_default,
-    &:disabled {
-        color: @grey;
-        border: 1px solid @lightgrey;
-        cursor: auto;
-
-        &:hover {
-            background: white;
         }
     }
 }
