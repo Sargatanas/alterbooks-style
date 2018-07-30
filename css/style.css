@@ -31,6 +31,11 @@
   cursor: pointer;
   user-select: none;
 }
+@media screen and (max-width: 479px) {
+  .button {
+    font-size: 14px;
+  }
+}
 .button:hover {
   outline: 0 !important;
   background: #f9f9f9;
@@ -83,14 +88,15 @@
 .button_red:active {
   background: #c7320a;
 }
-.button_second {
+.button_second,
+.button_second:focus {
   display: flex;
   width: 100%;
   margin-right: 10px;
   margin-bottom: 10px;
   margin-left: 0;
   padding: 8px 10px;
-  border: 2px solid #79d866;
+  border: 2px solid #c9c8c8;
   border-radius: 3px;
   background: transparent;
   box-shadow: none;
@@ -99,8 +105,12 @@
   transition-property: border-color, color;
   transition-duration: 0.3s, 0.3s;
 }
-.button_second:hover {
-  border-color: #1cba00;
+.button_second:hover,
+.button_second:focus:hover,
+.button_second:active,
+.button_second:focus:active {
+  border-color: #79d866;
+  background: white;
   color: black;
   cursor: pointer;
 }
@@ -414,6 +424,11 @@
 .block-content-header__title {
   margin-left: 10px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 479px) {
+  .block-content-header__title {
+    font-size: 14px;
+  }
 }
 .block-content-header__title_center {
   margin-left: 0;
@@ -1722,6 +1737,11 @@
   display: flex;
   flex-direction: row;
 }
+@media screen and (max-width: 479px) {
+  .user-book__main {
+    flex-wrap: wrap;
+  }
+}
 .user-book__cover {
   width: 115px;
   max-width: 115px;
@@ -1733,22 +1753,50 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 385px) {
+  .user-book__cover {
+    margin: 10px auto 15px;
+  }
+}
 .user-book__info {
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 385px) {
+  .user-book__info {
+    width: 100%;
+  }
 }
 .user-book__title {
   margin: 5px 0 15px;
   font-size: 16px;
 }
+@media screen and (max-width: 385px) {
+  .user-book__title {
+    margin: 10px auto 15px;
+    text-align: center;
+  }
+}
 .user-book-content__element {
   margin-bottom: 10px;
+}
+@media screen and (max-width: 385px) {
+  .user-book-content__element {
+    flex-wrap: nowrap;
+  }
 }
 .user-book-content__title,
 .user-book-content__info {
   min-width: 0;
   font-size: 13px;
   color: #979695;
+}
+@media screen and (max-width: 385px) {
+  .user-book-content__title,
+  .user-book-content__info {
+    width: auto;
+    margin-bottom: 0;
+  }
 }
 .user-book__footer {
   width: 100%;
@@ -1765,6 +1813,17 @@
 .user-book__button:last-child {
   margin-right: 0;
   background: white;
+}
+.user-books[data-status="open"] > .user-books__button_close {
+  display: none;
+}
+.user-books[data-status="close"] > * {
+  display: none;
+}
+.user-books[data-status="close"] > *:nth-child(1),
+.user-books[data-status="close"] > *:nth-child(2),
+.user-books[data-status="close"] > .user-books__button_close {
+  display: flex;
 }
 .book-list-aside {
   max-width: 250px;

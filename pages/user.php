@@ -155,7 +155,9 @@ include "common/header.php"
                                     </div>
                                 </div>
                                 <div class="col-12 col-clear">
-                                    <div class="row row-between">
+                                    <div class="user-books row row-between"
+                                         id="user-books"
+                                         data-status="close">
                                         <div class="user-book col-6 col-md-12 row">
                                             <div class="user-book__main col-12">
                                                 <div class="user-book__cover"
@@ -194,7 +196,7 @@ include "common/header.php"
                                             </div>
                                             <div class="user-book__footer col-12 col-md-10 col-sm-12">
                                                 <div class="row">
-                                                    <button class="user-book__button button button_green col-5 col-sm-12">
+                                                    <button class="user-book__button button col-5 col-sm-12">
                                                         <span>читать</span>
                                                     </button>
                                                     <button class="user-book__button button col-5 col-sm-12">
@@ -239,9 +241,9 @@ include "common/header.php"
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="user-book__footer col-12 col-md-9 col-sm-12">
+                                            <div class="user-book__footer col-12 col-md-10 col-sm-12">
                                                 <div class="row">
-                                                    <button class="user-book__button button button_green col-5 col-sm-12">
+                                                    <button class="user-book__button button col-5 col-sm-12">
                                                         <span>читать</span>
                                                     </button>
                                                     <button class="user-book__button button col-5 col-sm-12">
@@ -250,10 +252,67 @@ include "common/header.php"
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-clear col-md-12">
+                                        <div class="user-book col-6 col-md-12 row">
+                                            <div class="user-book__main col-12">
+                                                <div class="user-book__cover"
+                                                     style="background-image: url('/css/img/cover.png')"></div>
+                                                <div class="user-book__info">
+                                                    <div class="user-book__title">
+                                                        Пиши, сокращай
+                                                    </div>
+                                                    <div class="block-content-main user-book-content">
+                                                        <div class="block-content-main__element user-book-content__element">
+                                                            <div class="block-content-main__title user-book-content__title">
+                                                                Опубликовано
+                                                            </div>
+                                                            <div class="block-content-main__info user-book-content__info">
+                                                                07.03.18
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-content-main__element user-book-content__element">
+                                                            <div class="block-content-main__title user-book-content__title">
+                                                                Страниц
+                                                            </div>
+                                                            <div class="block-content-main__info user-book-content__info">
+                                                                128
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-content-main__element user-book-content__element">
+                                                            <div class="block-content-main__title user-book-content__title">
+                                                                Рейтинг
+                                                            </div>
+                                                            <div class="block-content-main__info user-book-content__info">
+                                                                7.0
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="user-book__footer col-12 col-md-10 col-sm-12">
+                                                <div class="row">
+                                                    <button class="user-book__button button col-5 col-sm-12">
+                                                        <span>читать</span>
+                                                    </button>
+                                                    <button class="user-book__button button col-5 col-sm-12">
+                                                        <span>профиль</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="user-books__button_close col-12 col-clear"
+                                             id="user-books-close">
                                             <div class="row row-end">
                                                 <button class="user-book__button button button_second col-4 col-md-12">
                                                     <span>и еще 9 книг</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="user-books__button_open col-12 col-clear"
+                                             id="user-books-open">
+                                            <div class="row">
+                                                <button class="user-book__button button button_second col-4 col-md-6 col-sm-12">
+                                                    <span>скрыть</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -263,7 +322,6 @@ include "common/header.php"
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -278,5 +336,18 @@ include 'authentication.php';
 ?>
 
 <script src="/js/auth.js"></script>
+<script>
+    let button_close = document.getElementById('user-books-close');
+    let button_open = document.getElementById('user-books-open');
+    let user_books = document.getElementById('user-books');
+
+    button_close.addEventListener('click', function () {
+        user_books.setAttribute('data-status', 'open');
+    });
+
+    button_open.addEventListener('click', function () {
+        user_books.setAttribute('data-status', 'close');
+    });
+</script>
 </body>
 </html>

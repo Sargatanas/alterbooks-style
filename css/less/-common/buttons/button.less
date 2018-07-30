@@ -22,6 +22,10 @@
     cursor: pointer;
     user-select: none;
 
+    @media screen and (max-width: @sm) {
+        font-size: 14px;
+    }
+
     &:hover {
         outline: 0 !important;
         background: rgb(249, 249, 249);
@@ -85,7 +89,8 @@
         }
     }
 
-    &_second {
+    &_second,
+    &_second:focus {
         display: flex;
         width: 100%;
 
@@ -94,7 +99,7 @@
         margin-left: 0;
         padding: 8px 10px;
 
-        border: 2px solid @lightgreen;
+        border: 2px solid @grey;
         border-radius: 3px;
         background: transparent;
         box-shadow: none;
@@ -105,8 +110,10 @@
         transition-property: border-color, color;
         transition-duration: 0.3s, 0.3s;
 
-        &:hover {
-            border-color: @green;
+        &:hover,
+        &:active {
+            border-color: @lightgreen;
+            background: white;
             color: black;
             cursor: pointer;
         }
